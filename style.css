@@ -589,3 +589,45 @@ body {
 .hero-card-btn:hover {
     background: #f7f7f7;
 }
+/* نفس خلفية البنر */
+.hero-banner-secondary {
+    background: linear-gradient(to right, #d4a017, #f1c75b);
+    padding: 60px 20px; /* نفس ارتفاع البنر */
+    margin-top: 15px; /* المسافة بين البنر الأول والثاني */
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* نفس محتوى البنر الأصلي */
+.hero-banner-inner {
+    max-width: 900px;
+    margin: auto;
+    color: white;
+}
+
+.hero-banner-inner h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero-banner-inner p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: white;
+    color: #d4a017;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.hero-btn:hover {
+    background: #f7f7f7;
+}
