@@ -645,3 +645,6 @@ body {
     max-width: 900px;
     margin: auto;
 }
+.about-section {
+    margin-top: 15px !important;
+}
