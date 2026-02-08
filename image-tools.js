@@ -87,15 +87,52 @@ function absherPreviewImage() {
 
     img.src = URL.createObjectURL(file);
 }
+/* ============================================================
+   القص التلقائي للصورة (Auto Crop to Square)
+============================================================ */
+
+function absherAutoCrop() {
+    const canvas = document.getElementById("absherCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // إنشاء Canvas جديد للقص
+    const croppedCanvas = document.createElement("canvas");
+    const croppedCtx = croppedCanvas.getContext("2d");
+
+    const width = canvas.width;
+    const height = canvas.height;
+
+    // تحديد أقصر ضلع
+    const size = Math.min(width, height);
+
+    // حساب نقطة البداية للقص
+    const startX = (width - size) / 2;
+    const startY = (height - size) / 2;
+
+    // ضبط حجم Canvas الجديد
+    croppedCanvas.width = size;
+    croppedCanvas.height = size;
+
+    // قص الصورة
+    croppedCtx.drawImage(canvas, startX, startY, size, size, 0, 0, size, size);
+
+    // إعادة رسم الصورة المقصوصة على Canvas الأصلي
+    canvas.width = size;
+    canvas.height = size;
+    ctx.drawImage(croppedCanvas, 0, 0);
+}
 
 /* ============================================================
    تجهيز الصورة (placeholder)
 ============================================================ */
 
 function processAbsherImage() {
+    absherAutoCrop();
+
     document.getElementById("absherResult").innerHTML =
-        "سيتم إضافة معالجة الصورة (القص + الإضاءة + الخلفية) لاحقًا.";
+        "✔️ تم قص الصورة تلقائيًا إلى مقاس مربع (جاهزة للخطوة التالية).";
 }
+
 
 /* ============================================================
    حفظ الصورة (placeholder)
