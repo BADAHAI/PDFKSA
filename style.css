@@ -648,3 +648,12 @@ body {
 .about-section {
     margin-top: 15px !important;
 }
+.hero-banner-secondary {
+    background: rgba(0, 128, 0, 0.15); /* نفس الأخضر الفاتح الشفاف */
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(0, 128, 0, 0.2);
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 15px; /* مسافة بسيطة بين البنرين */
+}
