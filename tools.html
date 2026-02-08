@@ -7,6 +7,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- مكتبة PDF-LIB -->
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
 </head>
 
 <body>
@@ -39,23 +42,23 @@
 
             <div class="tools-grid">
 
-                <div class="tool-card" onclick="openTool('merge')">
+                <div class="tool-card" onclick="openMergePDFTool()">
                     <h3>دمج ملفات PDF</h3>
                 </div>
 
-                <div class="tool-card" onclick="openTool('split')">
+                <div class="tool-card" onclick="openSplitPDFTool()">
                     <h3>تقسيم PDF</h3>
                 </div>
 
-                <div class="tool-card" onclick="openTool('compress')">
+                <div class="tool-card" onclick="openCompressPDFTool()">
                     <h3>ضغط PDF</h3>
                 </div>
 
-                <div class="tool-card" onclick="openTool('pdf-to-img')">
+                <div class="tool-card" onclick="openPDFToImagesTool()">
                     <h3>تحويل PDF إلى صور</h3>
                 </div>
 
-                <div class="tool-card" onclick="openTool('img-to-pdf')">
+                <div class="tool-card" onclick="openImagesToPDFTool()">
                     <h3>تحويل الصور إلى PDF</h3>
                 </div>
 
@@ -70,20 +73,24 @@
 
             <div class="tools-grid">
 
-                <div class="tool-card" onclick="openTool('resize-img')">
+                <div class="tool-card" onclick="openImageResizeTool()">
                     <h3>تغيير حجم الصور</h3>
                 </div>
 
-                <div class="tool-card" onclick="openTool('compress-img')">
+                <div class="tool-card" onclick="openImageCompressTool()">
                     <h3>ضغط الصور</h3>
                 </div>
 
-                <div class="tool-card" onclick="openTool('convert-img')">
+                <div class="tool-card" onclick="openImageConvertTool()">
                     <h3>تحويل صيغ الصور</h3>
                 </div>
 
-                <div class="tool-card" onclick="openTool('crop-img')">
-                    <h3>قص الصور</h3>
+                <div class="tool-card" onclick="openImageRotateTool()">
+                    <h3>تدوير الصور</h3>
+                </div>
+
+                <div class="tool-card" onclick="openImageFlipTool()">
+                    <h3>قلب الصور</h3>
                 </div>
 
                 <div class="tool-card" onclick="openAbsherTool()">
@@ -131,7 +138,7 @@
         <div class="container">
             <p>© 2026 PDFKSA - جميع الحقوق محفوظة</p>
 
-            <a href="https://x.com/USERNAME" target="_blank" class="x-follow">
+            <a href="https://x.com/BADAH_AI" target="_blank" class="x-follow">
                 <span class="x-icon">✖</span>
                 <span>تابع حساب المطور</span>
             </a>
@@ -139,10 +146,10 @@
     </footer>
 
     <!-- ====================== المودال العادي ====================== -->
-    <div id="toolModal" class="modal">
+    <div id="pdfModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="toolContent"></div>
+            <span class="close" onclick="closeToolModal()">&times;</span>
+            <div id="pdfToolContent"></div>
         </div>
     </div>
 
@@ -155,6 +162,8 @@
     </div>
 
     <!-- JS -->
+    <script src="tools.js"></script>
     <script src="main.js"></script>
+
 </body>
 </html>
