@@ -660,3 +660,36 @@ body {
 .hero-banner-secondary {
     margin-top: 15px; /* مسافة بسيطة بين البنر الأول والثاني */
 }
+/* البنر الثاني */
+.hero-banner-secondary {
+    background: #ffffff; /* خلفية بيضاء */
+    color: #000000; /* الخط أسود */
+    padding: 40px 20px; /* نفس ارتفاع البنر الأول */
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 15px; /* مسافة بسيطة بين البنرين */
+    border: 1px solid rgba(0,0,0,0.1); /* حدود خفيفة */
+}
+
+/* النص داخل البنر */
+.hero-banner-secondary h2,
+.hero-banner-secondary p {
+    color: #000000; /* خط أسود */
+}
+
+/* زر البنر الثاني */
+.hero-btn-secondary {
+    display: inline-block;
+    background: #28a745; /* أخضر */
+    color: #ffffff; /* كتابة بيضاء */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none; /* بدون خط تحت الكتابة */
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.hero-btn-secondary:hover {
+    background: #218838; /* أخضر أغمق عند المرور */
+}
