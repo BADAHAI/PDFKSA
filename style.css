@@ -425,3 +425,36 @@ body {
     font-size: 15px;
     color: #444;
 }
+/* شبكة كروت المميزات */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* كرت الميزة */
+.feature-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--green-dark);
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #444;
+}
