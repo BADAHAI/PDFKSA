@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدوات PDFKSA</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ====================== الهيدر ====================== -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">PDFKSA</h1>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="tools.html">الأدوات</a>
+                <a href="about.html">من نحن</a>
+                <a href="privacy.html">سياسة الخصوصية</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====================== عنوان الصفحة ====================== -->
+    <section class="about-section">
+        <div class="container">
+            <h2>جميع الأدوات</h2>
+            <p>اختر الأداة التي تريد استخدامها. جميع الأدوات تعمل داخل المتصفح بدون رفع ملفات.</p>
+        </div>
+    </section>
+
+    <!-- ====================== قسم أدوات PDF ====================== -->
+    <section class="tools-section">
+        <div class="container">
+            <h2>أدوات PDF</h2>
+
+            <div class="tools-grid">
+
+                <div class="tool-card" onclick="openTool('merge')">
+                    <h3>دمج ملفات PDF</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('split')">
+                    <h3>تقسيم PDF</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('compress')">
+                    <h3>ضغط PDF</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('pdf-to-img')">
+                    <h3>تحويل PDF إلى صور</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('img-to-pdf')">
+                    <h3>تحويل الصور إلى PDF</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== قسم أدوات الصور ====================== -->
+    <section class="tools-section">
+        <div class="container">
+            <h2>أدوات الصور</h2>
+
+            <div class="tools-grid">
+
+                <div class="tool-card" onclick="openTool('resize-img')">
+                    <h3>تغيير حجم الصور</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('compress-img')">
+                    <h3>ضغط الصور</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('convert-img')">
+                    <h3>تحويل صيغ الصور</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('crop-img')">
+                    <h3>قص الصور</h3>
+                </div>
+
+                <div class="tool-card" onclick="openAbsherTool()">
+                    <h3>تجهيز صور منصة أبشر</h3>
+                    <span class="new-badge">جديد</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== قسم الأدوات المستقبلية ====================== -->
+    <section class="tools-section">
+        <div class="container">
+            <h2>أدوات قادمة قريبًا</h2>
+
+            <div class="tools-grid">
+
+                <div class="tool-card disabled">
+                    <h3>إزالة الخلفية</h3>
+                    <span class="new-badge">قريبًا</span>
+                </div>
+
+                <div class="tool-card disabled">
+                    <h3>تحسين جودة الصور</h3>
+                    <span class="new-badge">قريبًا</span>
+                </div>
+
+                <div class="tool-card disabled">
+                    <h3>OCR استخراج النصوص</h3>
+                    <span class="new-badge">قريبًا</span>
+                </div>
+
+                <div class="tool-card disabled">
+                    <h3>تعديل PDF</h3>
+                    <span class="new-badge">قريبًا</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== الفوتر ====================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2026 PDFKSA - جميع الحقوق محفوظة</p>
+
+            <a href="https://x.com/USERNAME" target="_blank" class="x-follow">
+                <span class="x-icon">✖</span>
+                <span>تابع حساب المطور</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ====================== المودال العادي ====================== -->
+    <div id="toolModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="toolContent"></div>
+        </div>
+    </div>
+
+    <!-- ====================== مودال أبشر (Full Screen) ====================== -->
+    <div id="absherModal" class="modal-full">
+        <div class="modal-full-content">
+            <span class="close-full" onclick="closeAbsherModal()">&times;</span>
+            <div id="absherToolContent"></div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+</body>
+</html>
