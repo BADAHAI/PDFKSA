@@ -1,34 +1,8 @@
 /* ===========================
-   فتح المودال العادي للأدوات
-=========================== */
-function openTool(toolName) {
-    const modal = document.getElementById("toolModal");
-    const content = document.getElementById("toolContent");
-
-    modal.style.display = "block";
-    content.innerHTML = `<h2>جاري تحميل أداة: ${toolName}</h2>
-                        
-}
-
-/* ===========================
    إغلاق المودال العادي
 =========================== */
 function closeModal() {
     document.getElementById("toolModal").style.display = "none";
-}
-
-/* ===========================
-   فتح مودال أداة تجهيز صور أبشر (Full Screen)
-=========================== */
-function openAbsherTool() {
-    const modal = document.getElementById("absherModal");
-    const content = document.getElementById("absherToolContent");
-
-    modal.style.display = "block";
-    content.innerHTML = `
-        <h2>أداة تجهيز صور منصة أبشر</h2>
-        <p>سيتم إضافة واجهة الأداة لاحقًا داخل image-tools.js</p>
-    `;
 }
 
 /* ===========================
