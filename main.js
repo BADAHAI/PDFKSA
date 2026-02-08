@@ -7,7 +7,7 @@ function openTool(toolName) {
 
     modal.style.display = "block";
     content.innerHTML = `<h2>جاري تحميل أداة: ${toolName}</h2>
-                         <p>سيتم إضافة محتوى الأداة لاحقًا داخل tools.js</p>`;
+                        
 }
 
 /* ===========================
