@@ -1,59 +1,72 @@
 /* ===========================
-   RESET
+   الألوان الأساسية للثيم السعودي
 =========================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Tajawal", sans-serif;
-}
-
-body {
-    background: #fafafa;
-    color: #222;
-    line-height: 1.7;
+:root {
+    --green-dark: #006C35;
+    --green-light: #4CAF50;
+    --gold: #CFAE70;
+    --white: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray-mid: #CCCCCC;
+    --black: #000000;
 }
 
 /* ===========================
-   الهيدر الجديد
+   إعدادات عامة
+=========================== */
+body {
+    margin: 0;
+    font-family: "Tajawal", sans-serif;
+    background: var(--gray-light);
+    color: var(--black);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===========================
+   الهيدر الجديد (أخضر)
 =========================== */
 .main-header {
+    background: var(--green-dark);
+    padding: 15px 0;
+    color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
     position: relative;
-    background: #ffffff;
-    border-bottom: 1px solid #eee;
 }
 
 .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #222;
+    color: var(--white);
 }
 
+/* زر الهامبرغر */
 .hamburger {
     position: absolute;
     right: 15px;
     font-size: 28px;
     background: none;
     border: none;
+    color: var(--white);
     cursor: pointer;
 }
 
-/* ===========================
-   القائمة المنسدلة
-=========================== */
+/* القائمة المنسدلة */
 .mobile-menu {
     display: none;
     flex-direction: column;
-    background: white;
+    background: var(--white);
     position: absolute;
     top: 60px;
     right: 10px;
     width: 200px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-mid);
     border-radius: 8px;
     padding: 10px;
     z-index: 999;
@@ -62,8 +75,8 @@ body {
 .mobile-menu a {
     padding: 12px;
     text-align: right;
-    border-bottom: 1px solid #eee;
-    color: #222;
+    border-bottom: 1px solid var(--gray-mid);
+    color: var(--black);
     text-decoration: none;
 }
 
@@ -79,97 +92,128 @@ body {
    بنر إعلان أداة أبشر
 =========================== */
 .new-tool-banner {
-    background: #f7f7f7;
-    padding: 12px;
+    background: var(--gold);
+    padding: 15px;
     text-align: center;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 12px;
 }
 
 .new-tool-banner button {
-    background: #d4a017;
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 8px 18px;
     border: none;
-    padding: 6px 14px;
-    margin-right: 10px;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    color: white;
-    font-weight: bold;
+    font-size: 15px;
+}
+
+.new-tool-banner button:hover {
+    background: var(--green-light);
 }
 
 /* ===========================
-   قسم التعريف
+   قسم نبذة عن الموقع
 =========================== */
 .about-section {
+    background: var(--white);
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 12px;
     text-align: center;
-    margin: 40px auto;
-    max-width: 700px;
-    padding: 0 20px;
-}
-
-.about-section h2 {
-    font-size: 26px;
-    margin-bottom: 10px;
 }
 
 /* ===========================
    الأدوات الأكثر استخدامًا
 =========================== */
 .tools-section {
-    text-align: center;
-    margin: 40px auto;
+    margin-top: 30px;
 }
 
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .tool-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #eee;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
     cursor: pointer;
+    position: relative;
     transition: 0.2s;
 }
 
 .tool-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
 }
 
-.badge {
-    background: #d4a017;
-    color: white;
-    padding: 4px 8px;
+.badge, .new-badge {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 4px 10px;
     border-radius: 6px;
     font-size: 12px;
-    display: inline-block;
-    margin-top: 8px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 /* ===========================
-   مميزات المنصة
+   قسم المميزات
 =========================== */
 .features-section {
+    background: var(--white);
+    padding: 40px 20px;
+    margin-top: 30px;
+    border-radius: 12px;
     text-align: center;
-    margin: 40px auto;
-    padding: 0 20px;
 }
 
-.features-section ul {
+.features-list {
     list-style: none;
-    margin-top: 15px;
+    padding: 0;
+    font-size: 18px;
 }
 
-.features-section li {
-    margin: 8px 0;
-    font-size: 18px;
+.features-list li {
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   الفوتر
+=========================== */
+.main-footer {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.x-follow {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.x-follow:hover {
+    color: var(--gold);
+}
+
+.x-icon {
+    font-size: 20px;
+    margin-left: 8px;
 }
 
 /* ===========================
@@ -184,38 +228,30 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.4);
 }
 
 .modal-content {
-    background-color: #fff;
+    background: var(--white);
     margin: auto;
     padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
+    border-radius: 15px;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .close {
-    color: #aaa;
     float: left;
     font-size: 28px;
     cursor: pointer;
 }
 
 /* ===========================
-   تجاوب كامل (Responsive)
+   تجاوب كامل
 =========================== */
-@media (max-width: 900px) {
-    .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .tools-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
     }
 
     .logo {
@@ -223,6 +259,6 @@ body {
     }
 
     .new-tool-banner {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
