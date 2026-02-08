@@ -7,11 +7,14 @@ function openAbsherTool() {
 
     modal.style.display = "block";
 
-    content.innerHTML = `
-        <h2>تجهيز صور منصة أبشر</h2>
-        <p>هنا سيتم وضع أداة تجهيز الصور.</p>
-    `;
+    // تحميل واجهة أداة أبشر من ملف image-tools.js
+    if (typeof loadAbsherTool === "function") {
+        loadAbsherTool(content);
+    } else {
+        content.innerHTML = "<p>تعذر تحميل الأداة. تأكد من تحميل image-tools.js</p>";
+    }
 }
+
 
 /* ===========================
    فتح المودال العادي (احتياطي)
