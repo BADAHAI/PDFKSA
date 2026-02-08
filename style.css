@@ -28,7 +28,7 @@ body {
 }
 
 /* ===========================
-   الهيدر الحديث (Modern Header)
+   الهيدر الأخضر الثابت (بدون شفافية)
 =========================== */
 
 .main-header {
@@ -39,25 +39,14 @@ body {
     padding: 18px 0;
     z-index: 9999;
 
-    /* شفاف + ضبابية */
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-
-    /* حدود خفيفة */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--green-dark);
+    border-bottom: none;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    transition: 0.35s ease;
-}
-
-/* عند التمرير يتحول لأخضر */
-.main-header.scrolled {
-    background: var(--green-dark);
-    backdrop-filter: blur(0px);
-    border-bottom: none;
+    transition: 0.25s ease;
 }
 
 /* ترتيب العناصر داخل الهيدر */
