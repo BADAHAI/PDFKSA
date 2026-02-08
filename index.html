@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDFKSA - منصة أدوات PDF وصور</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ====================== الهيدر ====================== -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">PDFKSA</h1>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="tools.html">الأدوات</a>
+                <a href="about.html">من نحن</a>
+                <a href="privacy.html">سياسة الخصوصية</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====================== بطاقة إعلان أداة أبشر ====================== -->
+    <section class="announcement-card">
+        <div class="container">
+            <h2>🚀 إطلاق أداة جديدة!</h2>
+            <p>تم إطلاق أداة <strong>تجهيز صور منصة أبشر</strong> – الآن يمكنك تجهيز صورتك بالمقاسات والمعايير الرسمية بسهولة.</p>
+            <button class="btn-gold" onclick="openAbsherTool()">جرّب الأداة الآن</button>
+        </div>
+    </section>
+
+    <!-- ====================== نبذة عن الموقع ====================== -->
+    <section class="about-section">
+        <div class="container">
+            <h2>عن منصة PDFKSA</h2>
+            <p>
+                منصة سعودية توفر أدوات PDF وصور تعمل بالكامل داخل المتصفح بدون رفع ملفات،
+                لضمان الخصوصية والسرعة وسهولة الاستخدام.
+            </p>
+        </div>
+    </section>
+
+    <!-- ====================== الأدوات الأكثر استخدامًا ====================== -->
+    <section class="tools-section">
+        <div class="container">
+            <h2>الأدوات الأكثر استخدامًا</h2>
+
+            <div class="tools-grid">
+
+                <div class="tool-card" onclick="openTool('merge')">
+                    <h3>دمج ملفات PDF</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('compress')">
+                    <h3>ضغط PDF</h3>
+                </div>
+
+                <div class="tool-card" onclick="openTool('pdf-to-img')">
+                    <h3>تحويل PDF إلى صور</h3>
+                </div>
+
+                <div class="tool-card" onclick="openAbsherTool()">
+                    <h3>تجهيز صور منصة أبشر</h3>
+                    <span class="new-badge">جديد</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================== المميزات ====================== -->
+    <section class="features-section">
+        <div class="container">
+            <h2>مميزات المنصة</h2>
+
+            <ul class="features-list">
+                <li>✔️ تعمل بدون رفع ملفات</li>
+                <li>✔️ سريعة وآمنة</li>
+                <li>✔️ مجانية بالكامل</li>
+                <li>✔️ واجهة بسيطة وسهلة الاستخدام</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ====================== الفوتر ====================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2026 PDFKSA - جميع الحقوق محفوظة</p>
+
+            <a href="https://x.com/BADAH_AI" target="_blank" class="x-follow">
+                <span class="x-icon">✖</span>
+                <span>تابع حساب المطور</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ====================== المودال العادي ====================== -->
+    <div id="toolModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="toolContent"></div>
+        </div>
+    </div>
+
+    <!-- ====================== مودال أداة أبشر (Full Screen) ====================== -->
+    <div id="absherModal" class="modal-full">
+        <div class="modal-full-content">
+            <span class="close-full" onclick="closeAbsherModal()">&times;</span>
+            <div id="absherToolContent"></div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
