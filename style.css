@@ -326,3 +326,69 @@ body {
     margin: 10px 0 15px;
     font-size: 16px;
 }
+/* ===========================
+   بنر متجاوب + حركة جميلة
+=========================== */
+
+.hero-banner {
+    background: rgba(0, 108, 53, 0.10); /* أخضر خفيف */
+    backdrop-filter: blur(4px);
+    max-width: 700px;
+    margin: 120px auto 40px;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    /* حركة */
+    opacity: 0;
+    transform: translateY(-15px);
+    animation: heroFade 0.8s ease-out forwards;
+}
+
+@keyframes heroFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-banner h2 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--green-dark);
+}
+
+.hero-banner p {
+    margin: 10px 0 15px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* زر داخل البنر */
+.hero-banner .btn-gold {
+    font-size: 16px;
+    padding: 10px 25px;
+}
+
+/* ===========================
+   تحسين البنر للجوال
+=========================== */
+@media (max-width: 600px) {
+    .hero-banner {
+        margin-top: 100px;
+        padding: 20px 15px;
+    }
+
+    .hero-banner h2 {
+        font-size: 20px;
+    }
+
+    .hero-banner p {
+        font-size: 15px;
+    }
+}
