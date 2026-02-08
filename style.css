@@ -631,3 +631,17 @@ body {
 .hero-btn:hover {
     background: #f7f7f7;
 }
+/* بنر جديد مستقل */
+.hero-banner-secondary {
+    background: linear-gradient(to right, #d4a017, #f1c75b); /* نفس الخلفية */
+    color: white;
+    padding: 60px 20px; /* نفس ارتفاع البنر */
+    text-align: center;
+    margin-top: 15px; /* المسافة بين البنر الأول والثاني */
+    border-radius: 10px;
+}
+
+.hero-banner-secondary .hero-content {
+    max-width: 900px;
+    margin: auto;
+}
