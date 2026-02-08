@@ -171,7 +171,6 @@ async function compressPDF() {
     const arrayBuffer = await input.files[0].arrayBuffer();
     const pdf = await PDFLib.PDFDocument.load(arrayBuffer);
 
-    // ضغط بسيط: إعادة إنشاء الملف (بدون صور عالية الجودة)
     const newPdf = await PDFLib.PDFDocument.create();
     const pages = await newPdf.copyPages(pdf, pdf.getPageIndices());
     pages.forEach(p => newPdf.addPage(p));
@@ -243,15 +242,7 @@ async function imagesToPDF() {
     result.innerText = "✔️ تم تحويل الصور إلى PDF.";
 }
 
-/* ------------------ 5) تحويل PDF إلى صور (ملاحظة) ------------------ */
-/* 
-   ملاحظة: تحويل PDF إلى صور يحتاج إما:
-   - مكتبة كبيرة مثل pdf.js + canvas
-   أو
-   - سيرفر يعالج الملف
-
-   هنا نضع واجهة فقط ونوضح للمستخدم أن الميزة ستُضاف لاحقًا.
-*/
+/* ------------------ 5) تحويل PDF إلى صور (واجهة فقط حالياً) ------------------ */
 
 function openPDFToImagesTool() {
     openToolModal(
@@ -487,7 +478,6 @@ function rotateImage() {
         const w = img.width;
         const h = img.height;
 
-        // لزاوية 90 أو 270 نقلب الأبعاد
         const sin = Math.abs(Math.sin(angleRad));
         const cos = Math.abs(Math.cos(angleRad));
         const newWidth = Math.round(w * cos + h * sin);
