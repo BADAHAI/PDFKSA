@@ -28,18 +28,50 @@ body {
 }
 
 /* ===========================
-   الهيدر الأخضر + التطوير الجديد
+   الهيدر الحديث (Modern Header)
 =========================== */
+
 .main-header {
-    background: var(--green-dark);
-    padding: 15px 0;
-    color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 0;
+    z-index: 9999;
+
+    /* شفاف + ضبابية */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+
+    /* حدود خفيفة */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+
+    transition: 0.35s ease;
 }
 
+/* عند التمرير يتحول لأخضر */
+.main-header.scrolled {
+    background: var(--green-dark);
+    backdrop-filter: blur(0px);
+    border-bottom: none;
+}
+
+/* ترتيب العناصر داخل الهيدر */
+.header-flex {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* الشعار يسار */
 .logo {
     font-size: 28px;
     font-weight: bold;
@@ -47,64 +79,28 @@ body {
     margin: 0;
 }
 
-/* زر الهامبرغر */
-.hamburger {
-    position: absolute;
-    right: 15px;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: var(--white);
-    cursor: pointer;
-    display: none;
-}
-
-/* القائمة الأصلية لسطح المكتب */
+/* القائمة يمين */
 .desktop-menu {
-    position: absolute;
-    left: 15px;
+    display: flex;
+    gap: 25px;
 }
 
 .desktop-menu a {
     color: var(--white);
-    margin-left: 20px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.25s;
 }
 
 .desktop-menu a:hover {
     color: var(--gold);
 }
 
-/* القائمة المنسدلة للجوال */
+/* حذف الهامبرغر والقائمة المنسدلة نهائيًا */
+.hamburger,
 .mobile-menu {
-    display: none;
-    flex-direction: column;
-    background: var(--white);
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 200px;
-    border: 1px solid var(--gray-mid);
-    border-radius: 8px;
-    padding: 10px;
-    z-index: 999;
-}
-
-.mobile-menu a {
-    padding: 12px;
-    text-align: right;
-    border-bottom: 1px solid var(--gray-mid);
-    color: var(--black);
-    text-decoration: none;
-}
-
-.mobile-menu a:last-child {
-    border-bottom: none;
-}
-
-.mobile-menu.show {
-    display: flex;
+    display: none !important;
 }
 
 /* ===========================
@@ -114,7 +110,7 @@ body {
     background: var(--gold);
     padding: 25px 0;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 100px; /* لأن الهيدر ثابت */
     border-radius: 12px;
 }
 
@@ -138,7 +134,7 @@ body {
 .about-section {
     background: var(--white);
     padding: 40px 0;
-    margin-top: 20px;
+    margin-top: 120px; /* حتى لا يغطيه الهيدر */
     border-radius: 12px;
     text-align: center;
 }
@@ -230,8 +226,9 @@ body {
 }
 
 .x-icon {
-    font-size: 20px;
+    font-size: 22px;
     margin-left: 8px;
+    font-weight: bold;
 }
 
 /* ===========================
@@ -293,10 +290,10 @@ body {
 =========================== */
 @media (max-width: 900px) {
     .desktop-menu {
-        display: none;
+        gap: 15px;
     }
 
-    .hamburger {
-        display: block;
+    .logo {
+        font-size: 24px;
     }
 }
