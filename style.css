@@ -28,7 +28,7 @@ body {
 }
 
 /* ===========================
-   الهيدر الجديد (أخضر)
+   الهيدر الأخضر + التطوير الجديد
 =========================== */
 .main-header {
     background: var(--green-dark);
@@ -44,6 +44,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     color: var(--white);
+    margin: 0;
 }
 
 /* زر الهامبرغر */
@@ -55,9 +56,27 @@ body {
     border: none;
     color: var(--white);
     cursor: pointer;
+    display: none;
 }
 
-/* القائمة المنسدلة */
+/* القائمة الأصلية لسطح المكتب */
+.desktop-menu {
+    position: absolute;
+    left: 15px;
+}
+
+.desktop-menu a {
+    color: var(--white);
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.desktop-menu a:hover {
+    color: var(--gold);
+}
+
+/* القائمة المنسدلة للجوال */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -89,28 +108,27 @@ body {
 }
 
 /* ===========================
-   بنر إعلان أداة أبشر
+   بطاقة إعلان أداة أبشر
 =========================== */
-.new-tool-banner {
+.announcement-card {
     background: var(--gold);
-    padding: 15px;
+    padding: 25px 0;
     text-align: center;
-    font-size: 18px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 12px;
 }
 
-.new-tool-banner button {
+.btn-gold {
     background: var(--green-dark);
     color: var(--white);
-    padding: 8px 18px;
+    padding: 10px 25px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
 }
 
-.new-tool-banner button:hover {
+.btn-gold:hover {
     background: var(--green-light);
 }
 
@@ -119,7 +137,7 @@ body {
 =========================== */
 .about-section {
     background: var(--white);
-    padding: 40px 20px;
+    padding: 40px 0;
     margin-top: 20px;
     border-radius: 12px;
     text-align: center;
@@ -154,7 +172,7 @@ body {
     box-shadow: 0 5px 12px rgba(0,0,0,0.15);
 }
 
-.badge, .new-badge {
+.new-badge {
     background: var(--green-dark);
     color: var(--white);
     padding: 4px 10px;
@@ -170,7 +188,7 @@ body {
 =========================== */
 .features-section {
     background: var(--white);
-    padding: 40px 20px;
+    padding: 40px 0;
     margin-top: 30px;
     border-radius: 12px;
     text-align: center;
@@ -246,19 +264,53 @@ body {
     cursor: pointer;
 }
 
+/* مودال أبشر */
+.modal-full {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+}
+
+.modal-full-content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.close-full {
+    font-size: 32px;
+    cursor: pointer;
+    float: left;
+}
+
 /* ===========================
-   تجاوب كامل
+   التجاوب
 =========================== */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%;
+@media (max-width: 900px) {
+    .desktop-menu {
+        display: none;
     }
 
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
     .logo {
         font-size: 22px;
     }
 
-    .new-tool-banner {
-        font-size: 15px;
+    .announcement-card {
+        padding: 18px;
+    }
+
+    .modal-content {
+        width: 90%;
     }
 }
