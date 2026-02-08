@@ -16,14 +16,19 @@
 
     <!-- ====================== الهيدر ====================== -->
     <header class="main-header">
-        <div class="container">
+        <div class="header-flex">
+
+            <!-- الشعار يسار -->
             <h1 class="logo">PDFKSA</h1>
-            <nav>
+
+            <!-- القائمة يمين -->
+            <nav class="desktop-menu">
                 <a href="index.html">الرئيسية</a>
                 <a href="tools.html">الأدوات</a>
                 <a href="about.html">من نحن</a>
                 <a href="privacy.html">سياسة الخصوصية</a>
             </nav>
+
         </div>
     </header>
 
@@ -139,7 +144,7 @@
             <p>© 2026 PDFKSA - جميع الحقوق محفوظة</p>
 
             <a href="https://x.com/BADAH_AI" target="_blank" class="x-follow">
-                <span class="x-icon">✖</span>
+                <span class="x-icon">𝕏</span>
                 <span>تابع حساب المطور</span>
             </a>
         </div>
@@ -155,18 +160,16 @@
 
     <!-- ====================== مودال أبشر (Full Screen) ====================== -->
     <div id="absherModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeAbsherModal()">&times;</span>
-        <div id="absherToolContent"></div>
+        <div class="modal-content">
+            <span class="close" onclick="closeAbsherModal()">&times;</span>
+            <div id="absherToolContent"></div>
+        </div>
     </div>
-</div>
 
-
-  <!-- JS -->
-<script src="tools.js"></script>
-<script src="image-tools.js"></script>
-<script src="main.js"></script>
-
+    <!-- JS -->
+    <script src="tools.js"></script>
+    <script src="image-tools.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>
