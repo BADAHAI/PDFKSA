@@ -657,3 +657,6 @@ body {
     text-align: center;
     margin-top: 15px; /* مسافة بسيطة بين البنرين */
 }
+.hero-banner-secondary {
+    margin-top: 15px; /* مسافة بسيطة بين البنر الأول والثاني */
+}
