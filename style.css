@@ -28,21 +28,18 @@ body {
 }
 
 /* ===========================
-   الهيدر — شعار يسار + قائمة يمين
+   الهيدر الأخضر + التطوير الجديد
 =========================== */
 .main-header {
     background: var(--green-dark);
     padding: 15px 0;
     color: var(--white);
-}
-
-.header-flex {
     display: flex;
-    justify-content: space-between; /* القائمة يمين — الشعار يسار */
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-/* الشعار يسار */
 .logo {
     font-size: 28px;
     font-weight: bold;
@@ -50,7 +47,24 @@ body {
     margin: 0;
 }
 
-/* القائمة يمين */
+/* زر الهامبرغر */
+.hamburger {
+    position: absolute;
+    right: 15px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+}
+
+/* القائمة الأصلية لسطح المكتب */
+.desktop-menu {
+    position: absolute;
+    left: 15px;
+}
+
 .desktop-menu a {
     color: var(--white);
     margin-left: 20px;
@@ -62,16 +76,35 @@ body {
     color: var(--gold);
 }
 
-/* إلغاء زر الهامبرغر */
-.hamburger {
-    display: none !important;
+/* القائمة المنسدلة للجوال */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: var(--white);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    border: 1px solid var(--gray-mid);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 999;
 }
 
-/* ===========================
-   القائمة المنسدلة (غير مستخدمة الآن)
-=========================== */
-.mobile-menu {
-    display: none !important;
+.mobile-menu a {
+    padding: 12px;
+    text-align: right;
+    border-bottom: 1px solid var(--gray-mid);
+    color: var(--black);
+    text-decoration: none;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu.show {
+    display: flex;
 }
 
 /* ===========================
@@ -79,13 +112,10 @@ body {
 =========================== */
 .announcement-card {
     background: var(--gold);
-    padding: 18px 0; /* أنحف */
+    padding: 25px 0;
     text-align: center;
     margin-top: 20px;
     border-radius: 12px;
-    max-width: 700px; /* وسط الصفحة */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .btn-gold {
@@ -103,7 +133,7 @@ body {
 }
 
 /* ===========================
-   نبذة عن الموقع
+   قسم نبذة عن الموقع
 =========================== */
 .about-section {
     background: var(--white);
@@ -175,7 +205,7 @@ body {
 }
 
 /* ===========================
-   الفوتر — أيقونة X الجديدة
+   الفوتر
 =========================== */
 .main-footer {
     background: var(--green-dark);
@@ -200,9 +230,8 @@ body {
 }
 
 .x-icon {
-    font-size: 22px;
+    font-size: 20px;
     margin-left: 8px;
-    font-weight: bold;
 }
 
 /* ===========================
@@ -265,5 +294,9 @@ body {
 @media (max-width: 900px) {
     .desktop-menu {
         display: none;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
