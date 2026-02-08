@@ -1,4 +1,30 @@
 /* ===========================
+   فتح مودال أداة أبشر
+=========================== */
+function openAbsherTool() {
+    const modal = document.getElementById("absherModal");
+    const content = document.getElementById("absherToolContent");
+
+    modal.style.display = "block";
+
+    content.innerHTML = `
+        <h2>تجهيز صور منصة أبشر</h2>
+        <p>هنا سيتم وضع أداة تجهيز الصور.</p>
+    `;
+}
+
+/* ===========================
+   فتح المودال العادي (احتياطي)
+=========================== */
+function openTool(toolName) {
+    const modal = document.getElementById("toolModal");
+    const content = document.getElementById("toolContent");
+
+    modal.style.display = "block";
+    content.innerHTML = `<h2>${toolName}</h2>`;
+}
+
+/* ===========================
    إغلاق المودال العادي
 =========================== */
 function closeModal() {
