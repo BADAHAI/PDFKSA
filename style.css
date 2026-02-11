@@ -315,6 +315,22 @@ body {
     transform: none;
     box-shadow: none;
 }
+
+/* ===========================
+   خلفية لعناوين الأقسام
+=========================== */
+
+.tools-section h2,
+.about-section h2 {
+    background: linear-gradient(135deg, var(--saudi-green), var(--saudi-green-dark));
+    color: var(--saudi-white);
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
 /* ===========================
    Animation للمودال (Fade-in)
 =========================== */
