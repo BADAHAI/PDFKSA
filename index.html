@@ -27,6 +27,11 @@
         <!-- الشعار -->
         <h1 class="logo"><i class="fa-solid fa-file-pdf"></i> PDFKSA</h1>
 
+        <!-- زر همبرغر للجوال -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
         <!-- القائمة -->
         <nav class="desktop-menu">
             <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
@@ -138,6 +143,13 @@
 <!-- JS -->
 <script src="main.js"></script>
 <script src="image-tools.js"></script>
+
+<!-- زر الهمبرغر -->
+<script>
+function toggleMenu() {
+    document.querySelector('.desktop-menu').classList.toggle('active');
+}
+</script>
 
 </body>
 </html>
