@@ -478,3 +478,26 @@ body {
     align-items: center;
     gap: 6px;
 }
+/* إصلاح تمدد الجوال */
+.hero-tech,
+.hero-glass,
+.hero-buttons,
+.hero-icons {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero-icons {
+    flex-wrap: wrap;
+}
+
+.hero-buttons {
+    flex-wrap: wrap;
+}
+
+.hero-title,
+.hero-subtitle {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
