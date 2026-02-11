@@ -530,3 +530,9 @@ body {
 .secondary-btn:hover {
     background: rgba(255,255,255,0.35);
 }
+/* أيقونات تلقائية لبنود سياسة الخصوصية */
+.about-section.modern-section p::before {
+    content: "🔒 ";
+    font-size: 18px;
+    margin-left: 6px;
+}
