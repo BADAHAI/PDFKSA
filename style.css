@@ -75,7 +75,7 @@ body {
 }
 
 /* ===========================
-   البنرات (Hero)
+   البنرات القديمة
 =========================== */
 .modern-hero,
 .hero-banner {
@@ -217,6 +217,7 @@ body {
     border-radius: 14px;
     width: 90%;
     max-width: 600px;
+    animation: fadeInModal 0.25s ease-out;
 }
 
 .close,
@@ -257,8 +258,9 @@ body {
         display: flex;
     }
 }
+
 /* ===========================
-   كروت الأدوات (Tools Cards)
+   كروت الأدوات
 =========================== */
 
 .tools-grid {
@@ -285,14 +287,12 @@ body {
     box-shadow: 0 6px 25px rgba(0,0,0,0.08);
 }
 
-/* أيقونة الأداة */
 .tool-icon {
     font-size: 38px;
     color: var(--saudi-green);
     margin-bottom: 12px;
 }
 
-/* شارة جديد */
 .new-badge {
     position: absolute;
     top: 10px;
@@ -305,7 +305,6 @@ body {
     font-weight: 600;
 }
 
-/* الأدوات غير المتاحة */
 .tool-card.disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -317,7 +316,7 @@ body {
 }
 
 /* ===========================
-   Animation للمودال (Fade-in)
+   Animation للمودال
 =========================== */
 
 @keyframes fadeInModal {
@@ -331,11 +330,8 @@ body {
     }
 }
 
-.modal-content {
-    animation: fadeInModal 0.25s ease-out;
-}
 /* ===========================
-   تنسيق صفحة من نحن
+   صفحات من نحن + الخصوصية
 =========================== */
 
 .about-text {
@@ -369,34 +365,7 @@ body {
     transform: translateY(-4px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
-/* ===========================
-   تنسيق صفحة سياسة الخصوصية
-=========================== */
 
-.about-card {
-    background: var(--saudi-white);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    margin-top: 20px;
-    transition: 0.25s;
-}
-
-.about-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-
-.about-text {
-    font-size: 18px;
-    line-height: 1.9;
-}
-
-.about-subtitle {
-    font-size: 26px;
-    margin-top: 40px;
-    margin-bottom: 15px;
-}
 /* ===========================
    البنر التقني المتحرك (Hero)
 =========================== */
@@ -411,14 +380,12 @@ body {
     border-radius: 0 0 25px 25px;
 }
 
-/* حركة الخلفية */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* طبقة زجاجية */
 .hero-glass {
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(12px);
@@ -430,13 +397,11 @@ body {
     transform: translateY(-40px);
 }
 
-/* حركة الستارة */
 @keyframes curtainReveal {
     0% { opacity: 0; transform: translateY(-40px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* النص */
 .hero-title {
     font-size: 36px;
     font-weight: 700;
@@ -450,7 +415,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* الأزرار */
 .hero-buttons {
     display: flex;
     justify-content: center;
@@ -491,131 +455,12 @@ body {
     background: rgba(255,255,255,0.35);
 }
 
-/* نبضة الزر */
 @keyframes pulseBtn {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
 
-/* أيقونات */
-.hero-icons {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.hero-icons div {
-    color: white;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-/* ===========================
-   البنر التقني المتحرك (Hero)
-=========================== */
-
-.hero-tech {
-    width: 100%;
-    padding: 140px 20px 120px;
-    text-align: center;
-    background: linear-gradient(120deg, #0f5f34, #1A8F4B, #0f5f34);
-    background-size: 300% 300%;
-    animation: gradientMove 8s ease infinite;
-    border-radius: 0 0 25px 25px;
-}
-
-/* حركة الخلفية */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* طبقة زجاجية */
-.hero-glass {
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(12px);
-    padding: 45px 25px;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    animation: curtainReveal 1s ease-out forwards;
-    opacity: 0;
-    transform: translateY(-40px);
-}
-
-/* حركة الستارة */
-@keyframes curtainReveal {
-    0% { opacity: 0; transform: translateY(-40px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* النص */
-.hero-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 12px;
-}
-
-.hero-subtitle {
-    font-size: 20px;
-    color: #e8ffe8;
-    margin-bottom: 30px;
-}
-
-/* الأزرار */
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-}
-
-.hero-btn {
-    padding: 12px 26px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.25s;
-}
-
-.primary-btn {
-    background: white;
-    color: #0f5f34;
-    animation: pulseBtn 4s infinite;
-}
-
-.primary-btn:hover {
-    background: #e8ffe8;
-}
-
-.secondary-btn {
-    background: rgba(255,255,255,0.25);
-    color: white;
-    border: 1px solid rgba(255,255,255,0.4);
-}
-
-.secondary-btn:hover {
-    background: rgba(255,255,255,0.35);
-}
-
-/* نبضة الزر */
-@keyframes pulseBtn {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-/* أيقونات */
 .hero-icons {
     margin-top: 25px;
     display: flex;
