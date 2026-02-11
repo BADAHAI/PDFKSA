@@ -150,10 +150,18 @@ body {
 =========================== */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* ← صفين ثابتين على الكمبيوتر */
+    gap: 25px;
     margin-top: 25px;
     justify-items: center; /* ← توسيط الكروت داخل الشبكة */
+    width: 100%;
+}
+
+/* للجوال — كرت واحد في كل صف */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .feature-card {
@@ -164,8 +172,8 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     transition: 0.25s;
 
-    max-width: 260px;   /* ← تصغير عرض الكرت */
-    width: 100%;        /* ← يمنع التمدد */
+    max-width: 300px;  /* ← حجم ثابت جميل ومتناسق */
+    width: 100%;       /* ← يمنع التمدد */
     text-align: center; /* ← توسيط النص والأيقونة */
 }
 
