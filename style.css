@@ -379,7 +379,7 @@ body {
     background-size: 300% 300%;
     animation: gradientMove 8s ease infinite;
     border-radius: 0 0 25px 25px;
-    overflow: hidden; /* هذا يمنع الخلفية من تمديد الصفحة */
+    overflow: hidden; /* يمنع الخلفية من تمديد الصفحة */
 }
 
 @keyframes gradientMove {
