@@ -530,119 +530,67 @@ body {
 .secondary-btn:hover {
     background: rgba(255,255,255,0.35);
 }
-/* ===== كروت بنود سياسة الخصوصية ===== */
-.privacy-page p {
+/* ===========================
+   كروت صفحة سياسة الخصوصية (شكل مطابق لكروت المزايا)
+=========================== */
+
+.privacy-page .about-card {
     background: var(--saudi-white);
     border: 1px solid rgba(0,0,0,0.08);
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     border-radius: 14px;
-    padding: 65px 20px 25px;
+    padding: 70px 20px 25px;
     position: relative;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-/* دائرة الأيقونة مثل كروت المزايا */
-.privacy-page p::before {
+/* دائرة الأيقونة فوق العنوان */
+.privacy-page .about-card::before {
+    content: "";
     position: absolute;
     top: 15px;
     right: 50%;
     transform: translateX(50%);
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: var(--saudi-green);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
+    font-size: 28px;
 }
 
+/* ===== أيقونات البنود ===== */
+
 /* 1 — عدم رفع الملفات */
-.privacy-page p:nth-of-type(1)::before {
+.privacy-page .about-card:nth-of-type(1)::before {
     content: "📤";
 }
 
 /* 2 — عدم جمع البيانات */
-.privacy-page p:nth-of-type(2)::before {
+.privacy-page .about-card:nth-of-type(2)::before {
     content: "📊";
 }
 
 /* 3 — حماية البيانات */
-.privacy-page p:nth-of-type(3)::before {
+.privacy-page .about-card:nth-of-type(3)::before {
     content: "🛡️";
 }
 
 /* 4 — أدوات الطرف الثالث */
-.privacy-page p:nth-of-type(4)::before {
+.privacy-page .about-card:nth-of-type(4)::before {
     content: "🔌";
 }
 
 /* 5 — التحديثات */
-.privacy-page p:nth-of-type(5)::before {
+.privacy-page .about-card:nth-of-type(5)::before {
     content: "🔄";
 }
 
 /* 6 — التواصل معنا */
-.privacy-page p:nth-of-type(6)::before {
-    content: "✉️";
-}
-/* ===== كروت بنود سياسة الخصوصية ===== */
-.privacy-page p {
-    background: var(--saudi-white);
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    border-radius: 14px;
-    padding: 65px 20px 25px;
-    position: relative;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-/* دائرة الأيقونة مثل كروت المزايا */
-.privacy-page p::before {
-    position: absolute;
-    top: 15px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background: var(--saudi-green);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-}
-
-/* 1 — عدم رفع الملفات */
-.privacy-page p:nth-of-type(1)::before {
-    content: "📤";
-}
-
-/* 2 — عدم جمع البيانات */
-.privacy-page p:nth-of-type(2)::before {
-    content: "📊";
-}
-
-/* 3 — حماية البيانات */
-.privacy-page p:nth-of-type(3)::before {
-    content: "🛡️";
-}
-
-/* 4 — أدوات الطرف الثالث */
-.privacy-page p:nth-of-type(4)::before {
-    content: "🔌";
-}
-
-/* 5 — التحديثات */
-.privacy-page p:nth-of-type(5)::before {
-    content: "🔄";
-}
-
-/* 6 — التواصل معنا */
-.privacy-page p:nth-of-type(6)::before {
+.privacy-page .about-card:nth-of-type(6)::before {
     content: "✉️";
 }
