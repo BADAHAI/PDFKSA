@@ -8,6 +8,12 @@
     <!-- PDF LIB -->
     <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,47 +21,50 @@
 <body>
 
 <!-- ====================== الهيدر ====================== -->
-<header class="main-header">
+<header class="main-header modern-header">
     <div class="header-flex">
 
-        <!-- الشعار يسار -->
-        <h1 class="logo">PDFKSA</h1>
+        <!-- الشعار -->
+        <h1 class="logo"><i class="fa-solid fa-file-pdf"></i> PDFKSA</h1>
 
-        <!-- القائمة يمين -->
+        <!-- القائمة -->
         <nav class="desktop-menu">
-            <a href="index.html">الرئيسية</a>
-            <a href="tools.html">الأدوات</a>
-            <a href="about.html">من نحن</a>
-            <a href="privacy.html">سياسة الخصوصية</a>
+            <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+            <a href="tools.html"><i class="fa-solid fa-toolbox"></i> الأدوات</a>
+            <a href="about.html"><i class="fa-solid fa-circle-info"></i> من نحن</a>
+            <a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> سياسة الخصوصية</a>
         </nav>
 
     </div>
 </header>
-  <!-- ====================== بنر الاطلاق ====================== -->
-<section class="hero-banner">
-    <h2>🚀 إطلاق أداة جديدة!</h2>
+
+<!-- ====================== بنر الاطلاق ====================== -->
+<section class="hero-banner modern-hero">
+    <h2><i class="fa-solid fa-rocket"></i> إطلاق أداة جديدة!</h2>
     <p>تم إطلاق أداة <strong>تجهيز صور منصة أبشر</strong> – الآن يمكنك تجهيز صورتك بالمقاسات والمعايير الرسمية بسهولة.</p>
-    <button class="btn-gold" onclick="openAbsherTool()">جرّب الأداة الآن</button>
+    <button class="btn-primary" onclick="openAbsherTool()">جرّب الأداة الآن</button>
 </section>
 
-<!-- ====================== بنر ثانوي مطابق للأول ====================== -->
-<section class="hero-banner-secondary">
+<!-- ====================== بنر ثانوي ====================== -->
+<section class="hero-banner-secondary modern-card">
     <div class="hero-content">
-        <h2>أدوات PDF قوية وآمنة في متصفحك</h2>
+        <h2><i class="fa-solid fa-wand-magic-sparkles"></i> أدوات PDF قوية وآمنة في متصفحك</h2>
         <p>
             دمج، تقسيم، تدوير، ضغط، وتحويل ملفات PDF…  
             بالإضافة إلى أدوات الصور.  
             كل شيء يتم محليًا داخل المتصفح بدون رفع الملفات إلى أي سيرفر.
         </p>
 
-        <a href="tools.html" class="hero-btn-secondary">جرّب الأدوات الآن</a>
+        <a href="tools.html" class="btn-primary">
+            <i class="fa-solid fa-arrow-left"></i> جرّب الأدوات الآن
+        </a>
     </div>
 </section>
 
- <!-- ====================== نبذة عن الموقع ====================== -->
-<section class="about-section">
+<!-- ====================== نبذة عن الموقع ====================== -->
+<section class="about-section modern-section">
     <div class="container">
-        <h2>عن منصة PDFKSA</h2>
+        <h2><i class="fa-solid fa-circle-info"></i> عن منصة PDFKSA</h2>
         <p>
             منصة سعودية توفر أدوات PDF وصور تعمل بالكامل داخل المتصفح بدون رفع ملفات،
             لضمان الخصوصية والسرعة وسهولة الاستخدام.
@@ -63,31 +72,33 @@
     </div>
 </section>
 
-<!-- ====================== الأدوات الأكثر استخدامًا ====================== -->
-
 <!-- ====================== المميزات ====================== -->
-<section class="features-section">
+<section class="features-section modern-section">
     <div class="container">
-        <h2>مميزات المنصة</h2>
+        <h2><i class="fa-solid fa-star"></i> مميزات المنصة</h2>
 
         <div class="features-grid">
 
-            <div class="feature-card">
+            <div class="feature-card modern-card">
+                <i class="fa-solid fa-shield-halved feature-icon"></i>
                 <h3>بدون رفع ملفات</h3>
                 <p>جميع الأدوات تعمل داخل جهازك لضمان الخصوصية.</p>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card modern-card">
+                <i class="fa-solid fa-bolt feature-icon"></i>
                 <h3>سريعة وآمنة</h3>
                 <p>معالجة فورية بدون انتظار أو مخاطر.</p>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card modern-card">
+                <i class="fa-solid fa-gift feature-icon"></i>
                 <h3>مجانية بالكامل</h3>
                 <p>جميع الأدوات متاحة بدون أي رسوم.</p>
             </div>
 
-            <div class="feature-card">
+            <div class="feature-card modern-card">
+                <i class="fa-solid fa-hand-pointer feature-icon"></i>
                 <h3>سهلة الاستخدام</h3>
                 <p>واجهة بسيطة وواضحة للجميع.</p>
             </div>
@@ -96,14 +107,13 @@
     </div>
 </section>
 
-
 <!-- ====================== الفوتر ====================== -->
-<footer class="main-footer">
+<footer class="main-footer modern-footer">
     <div class="container">
         <p>© 2026 PDFKSA - جميع الحقوق محفوظة</p>
 
         <a href="https://x.com/BADAH_AI" target="_blank" class="x-follow">
-            <span class="x-icon">𝕏</span>
+            <i class="fa-brands fa-x-twitter"></i>
             <span>تابع حساب المطور</span>
         </a>
     </div>
@@ -128,7 +138,6 @@
 <!-- JS -->
 <script src="main.js"></script>
 <script src="image-tools.js"></script>
-
 
 </body>
 </html>
