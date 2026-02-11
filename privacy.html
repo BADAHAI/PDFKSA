@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سياسة الخصوصية - PDFKSA</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,111 +18,116 @@
 <body>
 
     <!-- ====================== الهيدر ====================== -->
-    <header class="main-header">
+    <header class="main-header modern-header">
         <div class="header-flex">
 
-            <!-- الشعار يسار -->
-            <h1 class="logo">PDFKSA</h1>
+            <!-- الشعار -->
+            <h1 class="logo"><i class="fa-solid fa-file-pdf"></i> PDFKSA</h1>
 
-            <!-- القائمة يمين -->
+            <!-- زر همبرغر للجوال -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- القائمة -->
             <nav class="desktop-menu">
-                <a href="index.html">الرئيسية</a>
-                <a href="tools.html">الأدوات</a>
-                <a href="about.html">من نحن</a>
-                <a href="privacy.html">سياسة الخصوصية</a>
+                <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <a href="tools.html"><i class="fa-solid fa-toolbox"></i> الأدوات</a>
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i> من نحن</a>
+                <a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> سياسة الخصوصية</a>
             </nav>
 
         </div>
     </header>
 
     <!-- ====================== سياسة الخصوصية ====================== -->
-    <section class="about-section" style="margin-top:140px;">
+    <section class="about-section modern-section">
         <div class="container">
 
-            <h2 style="font-size:32px; margin-bottom:20px;">سياسة الخصوصية</h2>
+            <h2><i class="fa-solid fa-shield-halved"></i> سياسة الخصوصية</h2>
 
-            <p style="font-size:18px; line-height:1.8;">
+            <p class="about-text">
                 نحرص في <strong>PDFKSA</strong> على حماية خصوصيتك وضمان أعلى مستوى من الأمان أثناء استخدامك لخدماتنا.
                 جميع الأدوات تعمل بالكامل داخل جهازك بدون رفع أي ملفات إلى خوادم خارجية.
             </p>
 
             <!-- ===== قسم 1 ===== -->
-            <div style="background:white; padding:20px; border-radius:12px; margin-top:25px; box-shadow:0 3px 8px rgba(0,0,0,0.1);">
+            <div class="about-card">
                 <h3>١. عدم رفع الملفات</h3>
-                <p style="font-size:17px; line-height:1.8;">
+                <p class="about-text">
                     جميع عمليات معالجة الملفات (PDF أو صور) تتم محليًا داخل جهازك باستخدام تقنيات المتصفح.
                     لا نقوم بتخزين أو إرسال أو مشاركة أي ملف مع أي جهة.
                 </p>
             </div>
 
             <!-- ===== قسم 2 ===== -->
-            <div style="background:white; padding:20px; border-radius:12px; margin-top:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1);">
+            <div class="about-card">
                 <h3>٢. عدم جمع البيانات</h3>
-                <p style="font-size:17px; line-height:1.8;">
+                <p class="about-text">
                     لا نقوم بجمع أي معلومات شخصية أو تقنية عن المستخدمين.
                     لا نستخدم ملفات تعريف الارتباط (Cookies) ولا أي أدوات تتبع.
                 </p>
             </div>
 
             <!-- ===== قسم 3 ===== -->
-            <div style="background:white; padding:20px; border-radius:12px; margin-top:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1);">
+            <div class="about-card">
                 <h3>٣. أمان البيانات</h3>
-                <p style="font-size:17px; line-height:1.8;">
+                <p class="about-text">
                     بما أن جميع العمليات تتم داخل جهازك، فإن ملفاتك تبقى آمنة تمامًا ولا تغادر جهازك في أي لحظة.
                 </p>
             </div>
 
             <!-- ===== قسم 4 ===== -->
-            <div style="background:white; padding:20px; border-radius:12px; margin-top:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1);">
+            <div class="about-card">
                 <h3>٤. أدوات الطرف الثالث</h3>
-                <p style="font-size:17px; line-height:1.8;">
+                <p class="about-text">
                     لا تستخدم المنصة أي خدمات خارجية لمعالجة الملفات أو تحليل البيانات.
                 </p>
             </div>
 
             <!-- ===== قسم 5 ===== -->
-            <div style="background:white; padding:20px; border-radius:12px; margin-top:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1);">
+            <div class="about-card">
                 <h3>٥. التحديثات</h3>
-                <p style="font-size:17px; line-height:1.8;">
+                <p class="about-text">
                     قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سيتم نشر أي تحديثات في هذه الصفحة.
                 </p>
             </div>
 
             <!-- ===== قسم 6 ===== -->
-            <div style="background:white; padding:20px; border-radius:12px; margin-top:20px; box-shadow:0 3px 8px rgba(0,0,0,0.1);">
-               <h3>٦. التواصل معنا</h3>
-<p style="font-size:17px; line-height:1.8;">
-    في حال وجود أي استفسار أو ملاحظة، يمكنك التواصل معنا عبر حساب المطور في منصة X.
-</p>
-
-<!-- رابط حساب تويتر تحت النص -->
-<a href="https://x.com/BADAH_AI" target="_blank" class="x-follow" 
-   style="margin-top:10px; display:inline-flex; align-items:center; color:#006C35; font-weight:600;">
-    
-    <span class="x-icon" style="font-size:22px; margin-left:8px; color:#006C35;">𝕏</span>
-    <span>زيارة حساب المطور</span>
-</a>
-
-
+            <div class="about-card">
+                <h3>٦. التواصل معنا</h3>
+                <p class="about-text">
+                    في حال وجود أي استفسار أو ملاحظة، يمكنك التواصل معنا عبر حساب المطور في منصة X.
                 </p>
+
+                <a href="https://x.com/BADAH_AI" target="_blank" class="x-follow" 
+                   style="margin-top:10px; display:inline-flex; align-items:center; color:#006C35; font-weight:600;">
+                    <span class="x-icon" style="font-size:22px; margin-left:8px; color:#006C35;">𝕏</span>
+                    <span>زيارة حساب المطور</span>
+                </a>
             </div>
 
         </div>
     </section>
 
     <!-- ====================== الفوتر ====================== -->
-    <footer class="main-footer">
+    <footer class="main-footer modern-footer">
         <div class="container">
             <p>© 2026 PDFKSA - جميع الحقوق محفوظة</p>
 
             <a href="https://x.com/BADAH_AI" target="_blank" class="x-follow">
-                <span class="x-icon">𝕏</span>
+                <i class="fa-brands fa-x-twitter"></i>
                 <span>تابع حساب المطور</span>
             </a>
         </div>
     </footer>
 
     <!-- JS -->
-    <script src="main.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.desktop-menu').classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>
