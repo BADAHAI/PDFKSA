@@ -209,3 +209,87 @@ body {
     font-size: 28px;
     cursor: pointer;
 }
+/* ===========================
+   الهيدر الجديد (هجين)
+=========================== */
+
+.main-header {
+    background: var(--saudi-white);
+    padding: 12px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--saudi-green);
+}
+
+/* الروابط */
+.desktop-menu {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-menu a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: var(--saudi-black);
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.desktop-menu a:hover {
+    color: var(--saudi-gold);
+}
+
+/* زر الهمبرغر */
+.hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--saudi-black);
+}
+
+/* ===========================
+   موبايل
+=========================== */
+@media (max-width: 768px) {
+
+    .desktop-menu {
+        position: absolute;
+        top: 65px;
+        right: 0;
+        background: var(--saudi-white);
+        width: 100%;
+        padding: 20px 0;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .desktop-menu a {
+        margin: 12px 0;
+        font-size: 17px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .desktop-menu.active {
+        display: flex;
+    }
+}
