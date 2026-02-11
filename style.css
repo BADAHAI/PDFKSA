@@ -514,3 +514,120 @@ body {
     align-items: center;
     gap: 6px;
 }
+/* ===========================
+   البنر التقني المتحرك (Hero)
+=========================== */
+
+.hero-tech {
+    width: 100%;
+    padding: 140px 20px 120px;
+    text-align: center;
+    background: linear-gradient(120deg, #0f5f34, #1A8F4B, #0f5f34);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+    border-radius: 0 0 25px 25px;
+}
+
+/* حركة الخلفية */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* طبقة زجاجية */
+.hero-glass {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    padding: 45px 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    animation: curtainReveal 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+/* حركة الستارة */
+@keyframes curtainReveal {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* النص */
+.hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #e8ffe8;
+    margin-bottom: 30px;
+}
+
+/* الأزرار */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.25s;
+}
+
+.primary-btn {
+    background: white;
+    color: #0f5f34;
+    animation: pulseBtn 4s infinite;
+}
+
+.primary-btn:hover {
+    background: #e8ffe8;
+}
+
+.secondary-btn {
+    background: rgba(255,255,255,0.25);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* نبضة الزر */
+@keyframes pulseBtn {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* أيقونات */
+.hero-icons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-icons div {
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
