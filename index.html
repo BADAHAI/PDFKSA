@@ -5,56 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDFKSA - منصة أدوات PDF وصور</title>
 
-    <!-- PDF LIB -->
     <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
-
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ====================== الهيدر ====================== -->
 <header class="main-header modern-header">
     <div class="header-flex">
-
-        <!-- الشعار -->
         <h1 class="logo"><i class="fa-solid fa-file-pdf"></i> PDFKSA</h1>
 
-        <!-- زر همبرغر للجوال -->
         <div class="hamburger" onclick="toggleMenu()">
             <i class="fa-solid fa-bars"></i>
         </div>
 
-        <!-- القائمة -->
         <nav class="desktop-menu">
             <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
             <a href="tools.html"><i class="fa-solid fa-toolbox"></i> الأدوات</a>
             <a href="about.html"><i class="fa-solid fa-circle-info"></i> من نحن</a>
             <a href="privacy.html"><i class="fa-solid fa-shield-halved"></i> سياسة الخصوصية</a>
         </nav>
-
     </div>
 </header>
 
-<!-- ====================== البنر التقني الجديد ====================== -->
-<section class="hero-tech">
-    <div class="container">
-        <div class="hero-glass">
+<!-- ====================== البنر ====================== -->
+<section class="hero-tech" style="overflow:hidden; max-width:100%;">
+    <div class="container" style="max-width:100%; overflow:hidden;">
+        <div class="hero-glass" style="max-width:100%; overflow:hidden;">
 
-            <h1 class="hero-title">منصة أدوات PDF وصور تعمل داخل جهازك</h1>
+            <h1 class="hero-title" style="max-width:100%; overflow-wrap:break-word;">
+                منصة أدوات PDF وصور تعمل داخل جهازك
+            </h1>
 
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" style="max-width:100%; overflow-wrap:break-word;">
                 خصوصية كاملة – بدون رفع ملفات – معالجة فورية وآمنة
             </p>
 
-            <div class="hero-buttons">
+            <div class="hero-buttons" style="flex-wrap:wrap; max-width:100%; overflow:hidden;">
                 <a onclick="openAbsherTool()" class="hero-btn primary-btn">
                     <i class="fa-solid fa-rocket"></i> إطلاق الأداة الجديدة
                 </a>
@@ -64,7 +53,7 @@
                 </a>
             </div>
 
-            <div class="hero-icons">
+            <div class="hero-icons" style="flex-wrap:wrap; max-width:100%; overflow:hidden;">
                 <div><i class="fa-solid fa-lock"></i> خصوصية كاملة</div>
                 <div><i class="fa-solid fa-bolt"></i> معالجة فورية</div>
                 <div><i class="fa-solid fa-laptop-code"></i> يعمل داخل جهازك</div>
@@ -74,7 +63,6 @@
     </div>
 </section>
 
-<!-- ====================== نبذة عن الموقع ====================== -->
 <section class="about-section modern-section">
     <div class="container">
         <h2><i class="fa-solid fa-circle-info"></i> عن منصة PDFKSA</h2>
@@ -85,13 +73,11 @@
     </div>
 </section>
 
-<!-- ====================== المميزات ====================== -->
 <section class="features-section modern-section">
     <div class="container">
         <h2><i class="fa-solid fa-star"></i> مميزات المنصة</h2>
 
         <div class="features-grid">
-
             <div class="feature-card modern-card">
                 <i class="fa-solid fa-shield-halved feature-icon"></i>
                 <h3>بدون رفع ملفات</h3>
@@ -115,12 +101,10 @@
                 <h3>سهلة الاستخدام</h3>
                 <p>واجهة بسيطة وواضحة للجميع.</p>
             </div>
-
         </div>
     </div>
 </section>
 
-<!-- ====================== الفوتر ====================== -->
 <footer class="main-footer modern-footer">
     <div class="container">
         <p>© 2026 PDFKSA - جميع الحقوق محفوظة</p>
@@ -132,7 +116,6 @@
     </div>
 </footer>
 
-<!-- ====================== المودال العادي ====================== -->
 <div id="toolModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -140,7 +123,6 @@
     </div>
 </div>
 
-<!-- ====================== مودال أداة أبشر ====================== -->
 <div id="absherModal" class="modal">
    <div class="modal-content">
         <span class="close-full" onclick="closeAbsherModal()">&times;</span>
@@ -148,11 +130,9 @@
     </div>
 </div>
 
-<!-- JS -->
 <script src="main.js"></script>
 <script src="image-tools.js"></script>
 
-<!-- زر الهمبرغر -->
 <script>
 function toggleMenu() {
     document.querySelector('.desktop-menu').classList.toggle('active');
