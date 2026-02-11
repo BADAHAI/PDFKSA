@@ -530,72 +530,33 @@ body {
 .secondary-btn:hover {
     background: rgba(255,255,255,0.35);
 }
-/* أيقونات خضراء لبنود سياسة الخصوصية — تظهر فوق عنوان البند */
-.privacy-page p {
-    position: relative;
-    padding-top: 45px;
-    text-align: center;
-}
-
-/* شكل الأيقونة */
-.privacy-page p::before {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    transform: translateX(50%);
-    font-size: 32px;
-    color: var(--saudi-green); /* نفس لون أيقونات المزايا */
-}
-
-/* 1 — عدم رفع الملفات */
-.privacy-page p:nth-of-type(1)::before {
-    content: "📤";
-}
-
-/* 2 — عدم جمع البيانات */
-.privacy-page p:nth-of-type(2)::before {
-    content: "📊";
-}
-
-/* 3 — حماية البيانات */
-.privacy-page p:nth-of-type(3)::before {
-    content: "🛡️";
-}
-
-/* 4 — أدوات الطرف الثالث */
-.privacy-page p:nth-of-type(4)::before {
-    content: "🔌";
-}
-
-/* 5 — التحديثات */
-.privacy-page p:nth-of-type(5)::before {
-    content: "🔄";
-}
-
-/* 6 — التواصل معنا */
-.privacy-page p:nth-of-type(6)::before {
-    content: "✉️";
-}
 /* ===== كروت بنود سياسة الخصوصية ===== */
 .privacy-page p {
     background: var(--saudi-white);
     border: 1px solid rgba(0,0,0,0.08);
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     border-radius: 14px;
-    padding: 55px 20px 25px;
+    padding: 65px 20px 25px;
     position: relative;
     text-align: center;
     margin-bottom: 25px;
 }
 
-/* الأيقونة فوق عنوان البند */
+/* دائرة الأيقونة مثل كروت المزايا */
 .privacy-page p::before {
     position: absolute;
     top: 15px;
     right: 50%;
     transform: translateX(50%);
-    font-size: 32px;
-    color: var(--saudi-green);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--saudi-green);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
 }
 
 /* 1 — عدم رفع الملفات */
