@@ -325,7 +325,7 @@ async function removeBG_AI() {
         const model = await loadU2NetModel();
 
         // تشغيل النموذج
-        const output = await model.run({ "input": tensor });
+        const output = await model.run({ "input.1": tensor });
         const mask = output.output.data;
 
         // إنشاء قناع بحجم الصورة الأصلية
