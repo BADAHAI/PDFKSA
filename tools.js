@@ -257,8 +257,9 @@ function openRemoveBGTool() {
         `
     );
 }
+
 /* ============================================================
-   إزالة الخلفية (AI) — دالة الذكاء الاصطناعي
+   إزالة الخلفية (AI) — النسخة النهائية بعد الإصلاح الكامل
 ============================================================ */
 
 /* تحميل نموذج U2NETP */
@@ -267,6 +268,7 @@ let u2netModel = null;
 async function loadU2NetModel() {
     if (u2netModel) return u2netModel;
 
+    // تحميل النموذج من مجلدك المحلي
     u2netModel = await ort.InferenceSession.create("./models/u2netp.onnx", {
         executionProviders: ["wasm"]
     });
@@ -324,12 +326,11 @@ async function removeBG_AI() {
         // تحميل النموذج
         const model = await loadU2NetModel();
 
-// تشغيل النموذج — الإدخال الصحيح "input"
-const output = await model.run({ "input": tensor });
+        // تشغيل النموذج — الإدخال الصحيح "input"
+        const output = await model.run({ "input": tensor });
 
-// المخرج الصحيح هو "output.1"
-const mask = output["output.1"].data;
-
+        // المخرج الصحيح هو "output.1"
+        const mask = output["output.1"].data;
 
         // إنشاء قناع 320x320
         const maskCanvas = document.createElement("canvas");
@@ -381,7 +382,6 @@ const mask = output["output.1"].data;
 
     img.src = URL.createObjectURL(file);
 }
-
 
 /* ============================================================
    أدوات الذكاء الاصطناعي (Placeholder)
