@@ -267,9 +267,9 @@ let u2netModel = null;
 async function loadU2NetModel() {
     if (u2netModel) return u2netModel;
 
-   u2netModel = await ort.InferenceSession.create("./models/u2netp.onnx", {
-    executionProviders: ["wasm"]
-});
+    u2netModel = await ort.InferenceSession.create("./models/u2netp.onnx", {
+        executionProviders: ["wasm"]
+    });
 
     return u2netModel;
 }
@@ -295,7 +295,7 @@ async function removeBG_AI() {
         canvas.width = img.width;
         canvas.height = img.height;
 
-        // رسم الصورة على كانفاس
+        // رسم الصورة الأصلية
         ctx.drawImage(img, 0, 0);
 
         // تجهيز صورة 320x320 للنموذج
@@ -308,14 +308,14 @@ async function removeBG_AI() {
         const imgData = tctx.getImageData(0, 0, 320, 320);
         const data = imgData.data;
 
-        // تحويل الصورة إلى تنسيق Float32 للنموذج
+        // تحويل الصورة إلى Float32
         const input = new Float32Array(1 * 3 * 320 * 320);
         let idx = 0;
 
         for (let i = 0; i < data.length; i += 4) {
-            input[idx] = data[i] / 255;       // R
-            input[idx + 320 * 320] = data[i + 1] / 255; // G
-            input[idx + 2 * 320 * 320] = data[i + 2] / 255; // B
+            input[idx] = data[i] / 255;                       // R
+            input[idx + 320 * 320] = data[i + 1] / 255;       // G
+            input[idx + 2 * 320 * 320] = data[i + 2] / 255;   // B
             idx++;
         }
 
@@ -324,14 +324,16 @@ async function removeBG_AI() {
         // تحميل النموذج
         const model = await loadU2NetModel();
 
-        // تشغيل النموذج
+        // تشغيل النموذج — الإدخال الصحيح input.1
         const output = await model.run({ "input.1": tensor });
-        const mask = output.output.data;
 
-        // إنشاء قناع بحجم الصورة الأصلية
+        // المخرج الصحيح هو "output"
+        const mask = output["output"].data;
+
+        // إنشاء قناع 320x320
         const maskCanvas = document.createElement("canvas");
-        maskCanvas.width = img.width;
-        maskCanvas.height = img.height;
+        maskCanvas.width = 320;
+        maskCanvas.height = 320;
         const mctx = maskCanvas.getContext("2d");
 
         const maskImg = mctx.createImageData(320, 320);
@@ -345,7 +347,7 @@ async function removeBG_AI() {
 
         mctx.putImageData(maskImg, 0, 0);
 
-        // تكبير القناع لحجم الصورة الأصلي
+        // تكبير القناع لحجم الصورة الأصلية
         const finalMaskCanvas = document.createElement("canvas");
         finalMaskCanvas.width = img.width;
         finalMaskCanvas.height = img.height;
@@ -378,6 +380,7 @@ async function removeBG_AI() {
 
     img.src = URL.createObjectURL(file);
 }
+
 
 /* ============================================================
    أدوات الذكاء الاصطناعي (Placeholder)
