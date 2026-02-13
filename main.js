@@ -56,3 +56,19 @@ window.onclick = function(event) {
         absherModal.style.display = "none";
     }
 };
+/* ===========================
+   فتح أداة إزالة الخلفية AI
+=========================== */
+function openRemoveBGTool() {
+    const modal = document.getElementById("pdfModal");
+    const content = document.getElementById("pdfToolContent");
+
+    modal.style.display = "block";
+
+    // تحميل واجهة الأداة من tools.js
+    if (typeof loadRemoveBGTool === "function") {
+        loadRemoveBGTool(content);
+    } else {
+        content.innerHTML = "<p>تعذر تحميل أداة إزالة الخلفية. تأكد من تحميل tools.js</p>";
+    }
+}
