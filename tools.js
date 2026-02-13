@@ -324,11 +324,12 @@ async function removeBG_AI() {
         // تحميل النموذج
         const model = await loadU2NetModel();
 
-        // تشغيل النموذج — الإدخال الصحيح input.1
-        const output = await model.run({ "input.1": tensor });
+// تشغيل النموذج — الإدخال الصحيح "input"
+const output = await model.run({ "input": tensor });
 
-        // المخرج الصحيح هو "output"
-        const mask = output["output"].data;
+// المخرج الصحيح هو "output.1"
+const mask = output["output.1"].data;
+
 
         // إنشاء قناع 320x320
         const maskCanvas = document.createElement("canvas");
