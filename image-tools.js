@@ -1,10 +1,25 @@
+/* ===========================
+   فتح مودال أداة أبشر
+=========================== */
 function openAbsherTool() {
     const modal = document.getElementById("absherModal");
     const content = document.getElementById("absherToolContent");
 
     modal.style.display = "block";
 
-    content.innerHTML = `
+    // تحميل واجهة الأداة من الدالة الجديدة
+    if (typeof loadAbsherTool === "function") {
+        loadAbsherTool(content);
+    } else {
+        content.innerHTML = "<p>تعذر تحميل الأداة. تأكد من تحميل image-tools.js</p>";
+    }
+}
+
+/* ===========================
+   تحميل واجهة أداة أبشر (الدالة المطلوبة)
+=========================== */
+function loadAbsherTool(container) {
+    container.innerHTML = `
         <h2>تجهيز صور منصة أبشر</h2>
         <p>اختر نوع الوثيقة وسيتم ضبط الأبعاد تلقائيًا حسب متطلبات منصة أبشر.</p>
 
@@ -38,9 +53,13 @@ function openAbsherTool() {
         <canvas id="absherCanvas" style="display:none;"></canvas>
     `;
 
-    setAbsherDimensions(); // ضبط الأبعاد تلقائيًا عند الفتح
+    // ضبط الأبعاد تلقائيًا عند الفتح
+    setAbsherDimensions();
 }
 
+/* ===========================
+   إغلاق مودال أبشر
+=========================== */
 function closeAbsherModal() {
     document.getElementById("absherModal").style.display = "none";
 }
