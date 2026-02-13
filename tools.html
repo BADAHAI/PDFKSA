@@ -237,16 +237,19 @@
     </div>
 
     <!-- JS -->
-    <script src="main.js"></script>
-    <script src="image-tools.js"></script>
-    <script src="tools.js"></script>
+  <script src="main.js"></script>
+<script src="image-tools.js"></script>
+<script src="tools.js"></script>
 
-    <!-- زر الهمبرغر -->
-    <script>
-        function toggleMenu() {
-            document.querySelector('.desktop-menu').classList.toggle('active');
-        }
-    </script>
+<!-- مكتبة ONNX Runtime Web (إضافة ضرورية لأداة إزالة الخلفية المتقدمة AI) -->
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.desktop-menu').classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
+
