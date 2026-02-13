@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://badahai.github.io/PDFKSA/sitemap.xml
