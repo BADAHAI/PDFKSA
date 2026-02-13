@@ -58,6 +58,7 @@
 
             <div class="tools-grid">
 
+                <!-- الأدوات القديمة -->
                 <div class="tool-card modern-card" onclick="openMergePDFTool()">
                     <i class="fa-solid fa-layer-group tool-icon"></i>
                     <h3>دمج ملفات PDF</h3>
@@ -83,6 +84,27 @@
                     <h3>تحويل الصور إلى PDF</h3>
                 </div>
 
+                <!-- الأدوات الجديدة -->
+                <div class="tool-card modern-card" onclick="openReorderPDFTool()">
+                    <i class="fa-solid fa-layer-group tool-icon"></i>
+                    <h3>إعادة ترتيب صفحات PDF</h3>
+                </div>
+
+                <div class="tool-card modern-card" onclick="openRotatePDFTool()">
+                    <i class="fa-solid fa-rotate tool-icon"></i>
+                    <h3>تدوير صفحات PDF</h3>
+                </div>
+
+                <div class="tool-card modern-card" onclick="openDeletePagesPDFTool()">
+                    <i class="fa-solid fa-trash tool-icon"></i>
+                    <h3>حذف صفحات من PDF</h3>
+                </div>
+
+                <div class="tool-card modern-card" onclick="openExtractImagesPDFTool()">
+                    <i class="fa-solid fa-image tool-icon"></i>
+                    <h3>استخراج الصور من PDF</h3>
+                </div>
+
             </div>
         </div>
     </section>
@@ -94,7 +116,8 @@
 
             <div class="tools-grid">
 
-   <div class="tool-card modern-card" onclick="openAbsherTool()">
+                <!-- الأدوات القديمة -->
+                <div class="tool-card modern-card" onclick="openAbsherTool()">
                     <i class="fa-solid fa-id-card tool-icon"></i>
                     <h3>تجهيز صور منصة أبشر</h3>
                     <span class="new-badge">جديد</span>
@@ -124,40 +147,60 @@
                     <i class="fa-solid fa-arrows-left-right tool-icon"></i>
                     <h3>قلب الصور</h3>
                 </div>
-                
+
+                <!-- الأدوات الجديدة -->
+                <div class="tool-card modern-card" onclick="openCropImageTool()">
+                    <i class="fa-solid fa-crop tool-icon"></i>
+                    <h3>قص الصور</h3>
+                </div>
+
+                <div class="tool-card modern-card" onclick="openWebPConvertTool()">
+                    <i class="fa-solid fa-file-image tool-icon"></i>
+                    <h3>تحويل الصور إلى WebP</h3>
+                </div>
+
+                <div class="tool-card modern-card" onclick="openEnhanceImageTool()">
+                    <i class="fa-solid fa-wand-magic-sparkles tool-icon"></i>
+                    <h3>تحسين جودة الصور</h3>
+                </div>
+
+                <div class="tool-card modern-card" onclick="openRemoveBGTool()">
+                    <i class="fa-solid fa-scissors tool-icon"></i>
+                    <h3>إزالة الخلفية</h3>
+                </div>
 
             </div>
         </div>
     </section>
 
-    <!-- ====================== قسم الأدوات المستقبلية ====================== -->
+    <!-- ====================== قسم أدوات الذكاء الاصطناعي ====================== -->
     <section class="tools-section modern-section">
         <div class="container">
-            <h2><i class="fa-solid fa-clock"></i> أدوات قادمة قريبًا</h2>
+            <h2><i class="fa-solid fa-brain"></i> أدوات قادمة قريبًا (ذكاء اصطناعي)</h2>
 
             <div class="tools-grid">
 
                 <div class="tool-card disabled">
-                    <i class="fa-solid fa-eraser tool-icon"></i>
-                    <h3>إزالة الخلفية</h3>
+                    <i class="fa-solid fa-brain tool-icon"></i>
+                    <h3>تحسين النصوص داخل الصور (OCR AI)</h3>
                     <span class="new-badge">قريبًا</span>
                 </div>
 
                 <div class="tool-card disabled">
-                    <i class="fa-solid fa-wand-magic-sparkles tool-icon"></i>
-                    <h3>تحسين جودة الصور</h3>
+                    <i class="fa-solid fa-wand-magic tool-icon"></i>
+                    <h3>تنظيف الصور بالذكاء الاصطناعي</h3>
                     <span class="new-badge">قريبًا</span>
                 </div>
 
                 <div class="tool-card disabled">
-                    <i class="fa-solid fa-file-lines tool-icon"></i>
-                    <h3>OCR استخراج النصوص</h3>
+                    <i class="fa-solid fa-sparkles tool-icon"></i>
+                    <h3>ترقية جودة الصور بالذكاء الاصطناعي</h3>
                     <span class="new-badge">قريبًا</span>
                 </div>
 
                 <div class="tool-card disabled">
-                    <i class="fa-solid fa-pen-to-square tool-icon"></i>
-                    <h3>تعديل PDF</h3>
+                    <i class="fa-solid fa-robot tool-icon"></i>
+                    <h3>تحويل النص إلى PDF تلقائيًا</h3>
                     <span class="new-badge">قريبًا</span>
                 </div>
 
