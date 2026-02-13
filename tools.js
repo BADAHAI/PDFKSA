@@ -267,9 +267,9 @@ let u2netModel = null;
 async function loadU2NetModel() {
     if (u2netModel) return u2netModel;
 
-    u2netModel = await ort.InferenceSession.create("./u2netp.onnx", {
-        executionProviders: ["wasm"]
-    });
+   u2netModel = await ort.InferenceSession.create("./models/u2netp.onnx", {
+    executionProviders: ["wasm"]
+});
 
     return u2netModel;
 }
