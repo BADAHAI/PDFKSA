@@ -1,5 +1,239 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <!-- Schema for دمج PDF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "دمج ملفات PDF",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#merge",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "دمج ملفات PDF بسهولة داخل المتصفح بدون رفع ملفات."
+}
+</script>
+
+<!-- Schema for تقسيم PDF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تقسيم PDF",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#split",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "تقسيم ملف PDF إلى صفحات محددة أو استخراج نطاق صفحات بسهولة."
+}
+</script>
+
+<!-- Schema for ضغط PDF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ضغط PDF",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#compress",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "ضغط ملفات PDF وتقليل حجمها بدون فقدان الجودة."
+}
+</script>
+
+<!-- Schema for تحويل PDF إلى صور -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تحويل PDF إلى صور",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#pdf-to-images",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "تحويل صفحات PDF إلى صور PNG أو JPG بسهولة."
+}
+</script>
+
+<!-- Schema for تحويل الصور إلى PDF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تحويل الصور إلى PDF",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#images-to-pdf",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "دمج عدة صور في ملف PDF واحد بجودة عالية."
+}
+</script>
+
+<!-- Schema for إعادة ترتيب PDF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "إعادة ترتيب صفحات PDF",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#reorder",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "إعادة ترتيب صفحات PDF حسب الترتيب الذي تريده."
+}
+</script>
+
+<!-- Schema for تدوير PDF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تدوير صفحات PDF",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#rotate",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "تدوير صفحات PDF بزاوية 90 أو 180 أو 270 درجة."
+}
+</script>
+
+<!-- Schema for حذف صفحات PDF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "حذف صفحات PDF",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#delete-pages",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "حذف صفحات محددة من ملف PDF بسهولة."
+}
+</script>
+
+<!-- Schema for استخراج الصور من PDF -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "استخراج الصور من PDF",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#extract-images",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "استخراج الصور الموجودة داخل ملف PDF وحفظها كملفات منفصلة."
+}
+</script>
+
+<!-- Schema for تغيير حجم الصور -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تغيير حجم الصور",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#resize-image",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "تغيير أبعاد الصور بسهولة مع الحفاظ على الجودة."
+}
+</script>
+
+<!-- Schema for ضغط الصور -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ضغط الصور",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#compress-image",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "ضغط الصور وتقليل حجمها بنسبة كبيرة مع الحفاظ على الجودة."
+}
+</script>
+
+<!-- Schema for تحويل صيغ الصور -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تحويل صيغ الصور",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#convert-image",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "تحويل الصور بين PNG و JPG و WebP بسهولة."
+}
+</script>
+
+<!-- Schema for تدوير الصور -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تدوير الصور",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#rotate-image",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "تدوير الصور بزوايا مختلفة داخل المتصفح."
+}
+</script>
+
+<!-- Schema for قلب الصور -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "قلب الصور",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#flip-image",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "قلب الصور أفقيًا أو عموديًا بسهولة."
+}
+</script>
+
+<!-- Schema for قص الصور -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "قص الصور",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#crop-image",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "قص الصور حسب الأبعاد التي تحددها بسهولة."
+}
+</script>
+
+<!-- Schema for WebP -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تحويل الصور إلى WebP",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#webp",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "تحويل الصور إلى صيغة WebP الحديثة لتقليل الحجم."
+}
+</script>
+
+<!-- Schema for تحسين جودة الصور -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "تحسين جودة الصور",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#enhance",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "تحسين جودة الصور وزيادة الوضوح والتباين تلقائيًا."
+}
+</script>
+
+<!-- Schema for إزالة الخلفية (AI) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "إزالة الخلفية (AI)",
+  "url": "https://badahai.github.io/PDFKSA/tools.html#remove-bg",
+  "applicationCategory": "Utility",
+  "operatingSystem": "All",
+  "description": "إزالة خلفية الصور باستخدام الذكاء الاصطناعي بدون برامج."
+}
+</script>
+  
 <head>
     <title>جميع أدوات PDF والصور — PDFKSA</title>
     <meta name="description" content="مجموعة شاملة من أدوات PDF والصور: دمج PDF، تقسيم PDF، ضغط PDF، تحويل الصور، قص الصور، تدوير PDF، حذف الصفحات، إزالة الخلفية بالذكاء الاصطناعي والمزيد.">
