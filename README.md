@@ -4,8 +4,7 @@
 
 ---
 
-## 🖼️ صورة من واجهة الموقع
-![PDFKSA Preview](https://via.placeholder.com/1200x500?text=PDFKSA+Preview)
+#+Preview)
 
 ---
 
