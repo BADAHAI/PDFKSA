@@ -4,9 +4,6 @@
 
 ---
 
-#+Preview)
-
----
 
 ## 🚀 المميزات
 - 🔒 **خصوصية كاملة** — جميع الأدوات تعمل محليًا داخل جهازك.
@@ -43,13 +40,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-blue?style=for-the-badge)
 ![Made in Saudi Arabia](https://img.shields.io/badge/Made%20in-KSA-006C35?style=for-the-badge)
-
----
-
-## 🎬 طريقة استخدام الأدوات (GIF)
-![PDFKSA Demo](https://via.placeholder.com/800x400?text=GIF+Demo+Here)
-
-> يمكنك استبدال الرابط بـ GIF حقيقي بعد رفعه داخل المستودع.
 
 ---
 
