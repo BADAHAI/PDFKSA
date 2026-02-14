@@ -1,18 +1,15 @@
-<svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- أيقونة الدائرة -->
-  <circle cx="60" cy="60" r="50" fill="#006C35"/>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- خلفية شفافة -->
+  
+  <!-- الدائرة الخضراء -->
+  <circle cx="200" cy="200" r="180" fill="#006C35"/>
 
   <!-- ورقة PDF -->
-  <rect x="40" y="28" width="40" height="55" rx="6" fill="white"/>
-  <polygon points="40,28 60,10 80,28" fill="white"/>
+  <rect x="140" y="120" width="120" height="160" rx="12" fill="white"/>
+  <polygon points="140,120 200,70 260,120" fill="white"/>
 
   <!-- حرف P داخل الورقة -->
-  <text x="60" y="63" font-size="28" font-family="Arial" font-weight="bold" fill="#006C35" text-anchor="middle">
+  <text x="200" y="215" font-size="90" font-family="Arial" font-weight="bold" fill="#006C35" text-anchor="middle">
     P
-  </text>
-
-  <!-- نص PDFKSA -->
-  <text x="140" y="72" font-size="48" font-family="Arial" font-weight="bold" fill="#006C35">
-    PDFKSA
   </text>
 </svg>
