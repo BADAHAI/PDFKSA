@@ -44,6 +44,6 @@
 ---
 
 ## 🌐 رابط الموقع الرسمي
-🔗 **https://pdfksa.com**
+🔗 **[https://badahai.github.io/PDFKSA]**
 
 ---
