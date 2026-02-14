@@ -1,13 +1,11 @@
 <svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- الخلفية شفافة -->
-  
-  <!-- الدائرة الخضراء -->
+  <!-- أيقونة الدائرة -->
   <circle cx="60" cy="60" r="50" fill="#006C35"/>
 
-  <!-- أيقونة PDF داخل الدائرة -->
+  <!-- ورقة PDF -->
   <rect x="40" y="28" width="40" height="55" rx="6" fill="white"/>
-  <polyline points="40,28 60,10 80,28" fill="white"/>
-  
+  <polygon points="40,28 60,10 80,28" fill="white"/>
+
   <!-- حرف P داخل الورقة -->
   <text x="60" y="63" font-size="28" font-family="Arial" font-weight="bold" fill="#006C35" text-anchor="middle">
     P
