@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://badahai.github.io/PDFKSA/tools.html</loc>
-    <priority>0.8</priority>
-  </url>
+  <!-- أدوات PDF -->
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#merge</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#split</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#compress</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#pdf-to-images</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#images-to-pdf</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#reorder</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#rotate</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#delete-pages</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#extract-images</loc></url>
+
+  <!-- أدوات الصور -->
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#absher</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#resize-image</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#compress-image</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#convert-image</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#rotate-image</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#flip-image</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#crop-image</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#webp</loc></url>
+  <url><loc>https://badahai.github.io/PDFKSA/tools.html#enhance</loc></url>
 
 </urlset>
