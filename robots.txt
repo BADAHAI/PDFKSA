@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://badahai.github.io/PDFKSA/sitemap_index.xml
-Sitemap: https://badahai.github.io/PDFKSA/sitemap.xml
