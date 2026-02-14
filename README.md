@@ -47,7 +47,6 @@
 🔗 **https://pdfksa.com**
 
 ---
-
 ## 🤝 كيفية المساهمة
 
 نرحّب بأي مساهمة لتحسين المشروع!  
@@ -56,4 +55,7 @@
 1. اعمل **Fork** للمستودع  
 2. أنشئ فرع جديد:
    ```bash
-   git checkout -b feature-name
+   ggit commit -m "Add new feature"
+git push origin feature-name
+it checkout -b feature-name
+
