@@ -1,307 +1,160 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>PDFKSA 3D Ad — 20s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDFKSA - إعلان تعريفي</title>
   <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      margin: 0;
-      overflow: hidden;
-      background: linear-gradient(180deg, #02040a 0%, #050816 40%, #000000 100%);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    #overlayText {
-      position: fixed;
-      inset: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0d47a1, #00695c);
+      color: white;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      pointer-events: none;
-      color: white;
-      font-size: 3.2rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-shadow: 0 0 25px rgba(0, 255, 180, 0.9);
-      opacity: 0;
-      transition: opacity 0.6s ease;
-      direction: rtl;
+      overflow: hidden;
     }
-    #tagline {
-      position: fixed;
-      bottom: 6vh;
-      width: 100%;
+    .container {
       text-align: center;
-      color: #f5f5f5;
-      font-size: 1.3rem;
+      max-width: 90%;
+      padding: 20px;
+      position: relative;
+    }
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px rgba(255,215,0,0.7);
+      animation: glow 3s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px gold; }
+      to   { text-shadow: 0 0 30px gold, 0 0 50px gold; }
+    }
+    .subtitle {
+      font-size: 1.8rem;
+      margin: 20px 0;
       opacity: 0;
-      text-shadow: 0 0 14px rgba(0, 255, 180, 0.8);
-      direction: rtl;
+    }
+    .feature {
+      font-size: 1.6rem;
+      margin: 15px 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .feature.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .lock {
+      font-size: 8rem;
+      margin: 20px 0;
+      opacity: 0;
+      animation: spin 8s linear infinite paused;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .url {
+      font-size: 2.2rem;
+      margin-top: 40px;
+      background: rgba(0,0,0,0.4);
+      padding: 15px 30px;
+      border-radius: 15px;
+      display: inline-block;
+      opacity: 0;
+    }
+    .flag {
+      font-size: 3rem;
+      margin-top: 20px;
+      opacity: 0;
+    }
+    /* particles background simulation */
+    .particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: float 15s infinite linear;
+    }
+    @keyframes float {
+      0%   { transform: translateY(100vh) scale(0.2); opacity: 0; }
+      10%  { opacity: 0.8; }
+      90%  { opacity: 0.8; }
+      100% { transform: translateY(-150px) scale(0.5); opacity: 0; }
     }
   </style>
 </head>
 <body>
 
-  <div id="overlayText">PDFKSA</div>
-  <div id="tagline">PDFKSA — أدواتك الآمنة والسريعة</div>
+  <div class="particles" id="particles"></div>
 
-  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <div class="container">
+    <h1>PDFKSA</h1>
+    
+    <div class="subtitle" id="step1">أدوات PDF وصور مجانية • 100% داخل متصفحك</div>
+    
+    <div class="lock" id="lock">🔒</div>
+    
+    <div class="feature" id="step2">خصوصية كاملة – لا رفع ملفات أبدًا</div>
+    <div class="feature" id="step3">معالجة فورية – بدون سيرفرات</div>
+    <div class="feature" id="step4">دمج • تقسيم • ضغط • تحويل • تعديل صور</div>
+    
+    <div class="url" id="step5">https://badahai.github.io/PDFKSA</div>
+    
+    <div class="flag" id="step6">🇸🇦 منصة سعودية • مجانية إلى الأبد</div>
+  </div>
 
   <script>
-    // === المشهد الأساسي ===
-    const scene = new THREE.Scene();
-
-    const camera = new THREE.PerspectiveCamera(
-      45,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-    );
-    camera.position.set(0, 1.2, 7);
-
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    document.body.appendChild(renderer.domElement);
-
-    // === إضاءة سينمائية Apple/Google ===
-    const ambient = new THREE.AmbientLight(0x335577, 0.45);
-    scene.add(ambient);
-
-    const keyLight = new THREE.DirectionalLight(0xffffff, 1.1);
-    keyLight.position.set(4, 6, 5);
-    scene.add(keyLight);
-
-    const fillLight = new THREE.DirectionalLight(0x00ff99, 0.4);
-    fillLight.position.set(-3, 2, -4);
-    scene.add(fillLight);
-
-    const rimLight = new THREE.PointLight(0x00ffaa, 1.2, 20);
-    rimLight.position.set(0, 3, -3);
-    scene.add(rimLight);
-
-    // === Particles ===
-    const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 1200;
-    const posArray = new Float32Array(particlesCount * 3);
-    for (let i = 0; i < particlesCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 30;
-    }
-    particlesGeometry.setAttribute("position", new THREE.BufferAttribute(posArray, 3));
-    const particlesMaterial = new THREE.PointsMaterial({
-      color: 0x00ffcc,
-      size: 0.03,
-      transparent: true,
-      opacity: 0.55,
-    });
-    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-    scene.add(particlesMesh);
-
-    // === كرة أرضية رقمية ===
-    const globeGeo = new THREE.SphereGeometry(1.4, 32, 32);
-    const globeMat = new THREE.MeshPhongMaterial({
-      color: 0x0b5cff,
-      wireframe: true,
-      emissive: 0x003366,
-      emissiveIntensity: 0.9,
-      transparent: true,
-      opacity: 1
-    });
-    const globe = new THREE.Mesh(globeGeo, globeMat);
-    scene.add(globe);
-
-    // === شعار PDFKSA ===
-    const logoGeo = new THREE.BoxGeometry(3.2, 1.1, 0.25);
-    const logoMat = new THREE.MeshPhysicalMaterial({
-      color: 0x0a1220,
-      metalness: 0.95,
-      roughness: 0.18,
-      clearcoat: 1.0,
-      clearcoatRoughness: 0.05,
-      emissive: 0x00ff99,
-      emissiveIntensity: 0.45,
-      sheen: 1.0,
-      sheenRoughness: 0.3,
-    });
-    const logoMesh = new THREE.Mesh(logoGeo, logoMat);
-    logoMesh.visible = false;
-    scene.add(logoMesh);
-
-    // === نافذة متصفح 3D تعرض موقعك ===
-    const siteTexture = new THREE.TextureLoader().load("https://badahai.github.io/PDFKSA/screenshot.png");
-
-    const browserFrameGeo = new THREE.BoxGeometry(4.5, 2.8, 0.15);
-    const browserFrameMat = new THREE.MeshStandardMaterial({
-      color: 0x0b1b33,
-      metalness: 0.8,
-      roughness: 0.3
-    });
-    const browserFrame = new THREE.Mesh(browserFrameGeo, browserFrameMat);
-    browserFrame.visible = false;
-    scene.add(browserFrame);
-
-    const browserScreenGeo = new THREE.PlaneGeometry(4.2, 2.5);
-    const browserScreenMat = new THREE.MeshBasicMaterial({
-      map: siteTexture
-    });
-    const browserScreen = new THREE.Mesh(browserScreenGeo, browserScreenMat);
-    browserScreen.visible = false;
-    browserScreen.position.z = 0.09;
-    browserFrame.add(browserScreen);
-
-    // === ملف PDF ===
-    const pdfGeo = new THREE.BoxGeometry(0.9, 1.2, 0.05);
-    const pdfMat = new THREE.MeshStandardMaterial({
-      color: 0xffffff,
-      emissive: 0x00aaff,
-      emissiveIntensity: 0.35
-    });
-    const pdfMesh = new THREE.Mesh(pdfGeo, pdfMat);
-    pdfMesh.visible = false;
-    scene.add(pdfMesh);
-
-    // === قفل ذهبي ===
-    const lockGroup = new THREE.Group();
-    const lockBodyGeo = new THREE.BoxGeometry(1.2, 1.4, 0.4);
-    const lockBodyMat = new THREE.MeshStandardMaterial({
-      color: 0xffd700,
-      metalness: 1,
-      roughness: 0.25,
-      emissive: 0x886600,
-      emissiveIntensity: 0.4
-    });
-    const lockBody = new THREE.Mesh(lockBodyGeo, lockBodyMat);
-    lockGroup.add(lockBody);
-
-    const lockArcGeo = new THREE.TorusGeometry(0.6, 0.12, 16, 32, Math.PI);
-    const lockArcMat = new THREE.MeshStandardMaterial({
-      color: 0xfff5c0,
-      metalness: 1,
-      roughness: 0.2
-    });
-    const lockArc = new THREE.Mesh(lockArcGeo, lockArcMat);
-    lockArc.position.y = 0.9;
-    lockArc.rotation.z = Math.PI;
-    lockGroup.add(lockArc);
-
-    lockGroup.visible = false;
-    scene.add(lockGroup);
-
-    // === توقيت الإعلان (20 ثانية) ===
-    const totalDuration = 20_000;
-    const startTime = performance.now();
-
-    const overlayText = document.getElementById("overlayText");
-    const tagline = document.getElementById("tagline");
-
-    const smooth = (v) => Math.sin((v * Math.PI) / 2);
-
-    function animate() {
-      requestAnimationFrame(animate);
-      const now = performance.now();
-      const elapsed = now - startTime;
-      const t = Math.min(elapsed / totalDuration, 1);
-
-      particlesMesh.rotation.y += 0.0008;
-      particlesMesh.rotation.x += 0.0003;
-
-      // === تقسيم الإعلان ===
-      // 0–4s   الكرة الأرضية + كاميرا سينمائية
-      // 4–8s   تحوّل الكرة إلى شعار PDFKSA
-      // 8–14s  مشهد PDF + القفل + الخصوصية
-      // 14–20s نافذة متصفح 3D تعرض موقعك
-
-      if (elapsed < 4000) {
-        // === 0–4s: الكرة الأرضية ===
-        const p = smooth(elapsed / 4000);
-
-        globe.visible = true;
-        logoMesh.visible = false;
-        browserFrame.visible = false;
-        pdfMesh.visible = false;
-        lockGroup.visible = false;
-
-        globe.rotation.y += 0.008;
-        globe.rotation.x += 0.003;
-
-        camera.position.x = Math.sin(p * 1.2) * 3.2;
-        camera.position.y = 1.1 + p * 0.2;
-        camera.position.z = 7 - p * 1.1;
-        camera.lookAt(0, 0, 0);
-
-        overlayText.style.opacity = 0;
-        tagline.style.opacity = 0;
-
-      } else if (elapsed < 8000) {
-        // === 4–8s: تحوّل الكرة إلى شعار ===
-        const phaseT = (elapsed - 4000) / 4000;
-        const p = smooth(phaseT);
-
-        globe.visible = true;
-        logoMesh.visible = true;
-
-        const s = 1.4 * (1 - p);
-        globe.scale.set(s, s, s);
-        globe.material.opacity = 1 - p;
-
-        logoMesh.scale.set(0.5 + p * 0.6, 0.5 + p * 0.6, 1);
-        logoMesh.position.y = -0.2 + p * 0.3;
-        logoMesh.rotation.y = (1 - p) * 0.6;
-
-        camera.position.set(0, 1.2 - p * 0.6, 6 - p * 1.2);
-        camera.lookAt(0, 0, 0);
-
-        overlayText.style.opacity = p;
-        tagline.style.opacity = 0;
-
-      } else if (elapsed < 14000) {
-        // === 8–14s: PDF + القفل ===
-        const phaseT = (elapsed - 8000) / 6000;
-        const p = smooth(phaseT);
-
-        globe.visible = false;
-        logoMesh.visible = false;
-        browserFrame.visible = false;
-        pdfMesh.visible = true;
-        lockGroup.visible = true;
-
-        pdfMesh.position.set(-1 + p * 1.8, 0.2, 1 - p * 0.9);
-        pdfMesh.rotation.y = -0.5 + p * 0.8;
-
-        lockGroup.position.set(1.6, 0.9, 0.2);
-        lockGroup.rotation.y += 0.01;
-
-        camera.position.set(0, 0.8, 5);
-        camera.lookAt(0, 0, 0);
-
-        overlayText.style.opacity = 0;
-        tagline.style.opacity = 0;
-
-      } else {
-        // === 14–20s: نافذة متصفح 3D تعرض موقعك ===
-        const phaseT = (elapsed - 14000) / 6000;
-        const p = smooth(phaseT);
-
-        browserFrame.visible = true;
-        browserFrame.position.set(0, 0, 0);
-        browserFrame.rotation.y = Math.sin(p * Math.PI * 2) * 0.1;
-
-        camera.position.set(0, 0.6, 5);
-        camera.lookAt(0, 0, 0);
-
-        overlayText.style.opacity = 1;
-        tagline.style.opacity = Math.min(p * 1.5, 1);
-      }
-
-      renderer.render(scene, camera);
+    // Create fake particles
+    const particlesContainer = document.getElementById('particles');
+    for(let i = 0; i < 40; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.width = p.style.height = Math.random() * 4 + 2 + 'px';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDelay = Math.random() * 15 + 's';
+      p.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      particlesContainer.appendChild(p);
     }
 
-    animate();
+    // Animation sequence ~20 seconds total
+    const steps = [
+      { id: 'step1', delay: 1000 },
+      { id: 'lock', delay: 4000, extra: () => document.getElementById('lock').style.animationPlayState = 'running' },
+      { id: 'step2', delay: 7000 },
+      { id: 'step3', delay: 10000 },
+      { id: 'step4', delay: 13000 },
+      { id: 'step5', delay: 16000 },
+      { id: 'step6', delay: 19000 }
+    ];
 
-    window.addEventListener("resize", () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+    steps.forEach((step, index) => {
+      setTimeout(() => {
+        const el = document.getElementById(step.id);
+        if (el) {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+          if (step.extra) step.extra();
+        }
+      }, step.delay);
     });
+
+    // Optional: loop after 22 seconds or just let it stay on last frame
+    setTimeout(() => {
+      // يمكنك إضافة fade out أو restart هنا لو تبي loop
+      // document.body.style.opacity = '0';
+      // setTimeout(() => location.reload(), 1000);
+    }, 22000);
   </script>
 </body>
 </html>
